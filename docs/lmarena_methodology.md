@@ -1,6 +1,6 @@
 # LMArena 方法论
 
-LMArena/Arena Leaderboard 是人类偏好评测：用户在盲测中比较两个模型输出，榜单通过统计模型估计偏好强弱；它不是“绝对智能”测试，也不能替代安全、事实性、鲁棒性、成本、延迟、上下文稳定性或企业合规评估。[S050: dataset card]
+LMArena/Arena Leaderboard 是人类偏好评测：用户在盲测中比较两个模型输出，榜单通过统计模型计算偏好强弱；它不是“绝对智能”测试，也不能替代安全、事实性、鲁棒性、成本、延迟、上下文稳定性或企业合规评估。[S050: dataset card]
 
 ## 必读字段
 
@@ -14,4 +14,3 @@ LMArena/Arena Leaderboard 是人类偏好评测：用户在盲测中比较两个
 | `leaderboard_publish_date` | 榜单发布日期，必须和检索日期分开。[S050: Schema] |
 
 Style Control 在 2025-05-16 成为 text/vision 默认，并调整 offset；因此 text_style_control 和旧 text 的时间序列不可无脑拼接。[S050: Notes]
-

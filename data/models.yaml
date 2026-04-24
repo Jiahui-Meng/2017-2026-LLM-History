@@ -3,60 +3,59 @@ models:
     latest_public: "GPT-5.5"
     api_latest_referenced: "GPT-5.4"
     openness: "closed"
-    architecture_public: "官方未披露"
-    context: "GPT-5.4 API up to 1M; GPT-5.5 API not launched at source time"
-    citations: ["S001", "S003", "S004"]
+    architecture_public: "GPT frontier reasoning/product family; 底层模型结构官方未披露"
+    context: "GPT-5.4 API/Codex 1M; GPT-5.5 API not launched at source time"
+    citations: ["S001", "S002", "S003", "S004"]
   anthropic:
     latest_public: "Claude Opus 4.7"
     openness: "closed"
-    architecture_public: "hybrid reasoning model; 参数/专家官方未披露"
+    architecture_public: "hybrid reasoning model; 参数、专家、层数官方未披露"
     context: "1M"
     citations: ["S005", "S006"]
   google:
     latest_public: "Gemini 3.1 Pro / Gemini 3 Pro Preview"
     openness: "closed"
-    architecture_public: "multimodal reasoning; 参数/专家官方未披露"
-    context: "1,048,576 input tokens for Gemini 3 Pro"
+    architecture_public: "multimodal reasoning family; 底层模型结构官方未披露"
+    context: "1,048,576 input tokens / 65,536 output tokens for Gemini 3 Pro Preview"
     citations: ["S008", "S009", "S010"]
   meta:
     latest_public: "Muse Spark"
-    open_weight_line: "Llama 4 Scout/Maverick"
-    openness: "Muse closed/private preview; Llama open-weight"
-    citations: ["S011", "S012", "S013"]
+    open_weight_line: "Llama 4 Scout / Llama 4 Maverick"
+    openness: "Muse closed/private preview; Llama open-weight gated"
+    architecture_public: "Llama 4 is MoE image-text-to-text; Muse Spark 底层结构官方未披露"
+    citations: ["S011", "S012", "S033", "S034"]
   kimi:
-    latest_public: "kimi-k2.6"
-    openness: "open-weight / Modified MIT"
-    architecture_public: "1T MoE lineage; 32B active in K2 docs; K2.6 native multimodal per model list"
-    context: "256k"
-    citations: ["S017", "S018"]
+    latest_public: "Kimi K2.6"
+    openness: "open-weight / API"
+    architecture_public: "KimiK25ForConditionalGeneration; MoE; 61 text layers; 384 routed experts; 262144 max positions"
+    citations: ["S017", "S027"]
   deepseek:
     latest_public: "DeepSeek-V3.2 / V3.2-Speciale"
-    openness: "MIT/open-weight"
-    architecture_public: "MoE + MLA lineage + DeepSeek Sparse Attention in V3.2-Exp"
-    citations: ["S014", "S015", "S016"]
+    openness: "MIT/open-weight/API"
+    architecture_public: "DeepseekV32ForCausalLM; MoE; 61 layers; 256 routed experts; DSA/MLA fields"
+    citations: ["S014", "S028"]
   qwen:
-    latest_public: "Qwen3.6-35B-A3B; Qwen3.5-397B-A17B family"
+    latest_public: "Qwen3.5-397B-A17B / Qwen3.6-35B-A3B"
     openness: "Apache 2.0/open-weight"
-    architecture_public: "MoE/hybrid architecture by model card"
-    citations: ["S019"]
+    architecture_public: "Qwen3_5MoeForConditionalGeneration; MoE; alternating linear_attention/full_attention; vision config"
+    citations: ["S019", "S030", "S031"]
   minimax:
     latest_public: "MiniMax-M2.1"
-    openness: "Modified MIT/open-weight"
-    architecture_public: "MoE, approx 230B total / 10B active"
-    citations: ["S020", "S021"]
+    openness: "open-weight/API"
+    architecture_public: "MiniMaxM2ForCausalLM; MoE; 62 layers; 256 local experts; MTP"
+    citations: ["S020", "S021", "S029"]
   glm:
     latest_public: "GLM-5.1"
     openness: "MIT/open-weight/API"
-    architecture_public: "官方页披露 long-horizon model; 第三方 NIM 披露 MoE/DSA，但本库模型卡将其标为非官方补充"
-    citations: ["S022"]
+    architecture_public: "GlmMoeDsaForCausalLM; MoE + DSA; 78 layers; 256 routed experts"
+    citations: ["S022", "S032"]
   grok:
     latest_public: "Grok 4.20 reasoning/non-reasoning"
     openness: "closed"
-    architecture_public: "官方未披露；API 披露 2M context and variants"
+    architecture_public: "底层模型结构官方未披露; API 披露 2M context and variants"
     citations: ["S024"]
   mistral:
     latest_public: "Mistral Large 3"
     openness: "Apache 2.0/open-weight"
-    architecture_public: "sparse MoE, 675B total / 41B active"
-    citations: ["S025", "S026"]
-
+    architecture_public: "sparse MoE; 675B total / 41B active; 256k context"
+    citations: ["S025", "S026", "S035"]

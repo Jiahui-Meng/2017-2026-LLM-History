@@ -1,17 +1,55 @@
-# Grok 最新模型卡
+# xAI 最新模型卡：Grok 4.20
 
-- 最新模型名称：Grok 4.20 reasoning / non-reasoning。[S024: API table]
-- 发布时间：xAI API 页列为 latest/new；具体发布时间需 xAI release notes 更新。[S024: API table]
-- 开放程度：闭源 API。
-- 架构：官方未披露参数、专家、attention、tokenizer；第三方关于 multi-agent 的说法不作为官方架构事实。
-- 预训练：官方未披露。
-- 后训练：官方 API 页强调 lowest hallucination rate、strict prompt adherence；训练方法未披露。[S024: API table]
-- 推理方式：reasoning/non-reasoning variants、2M context、agentic tool calling。[S024: API table]
-- 微调/部署：xAI API；无开放权重。[S024: API table]
-- LMArena 最新表现：grok-4.20-beta1 rank 8、rating 1485.0；grok-4.20-beta-0309-reasoning rank 10；grok-4.20-multi-agent-beta-0309 出现在 2026-04-02 snapshot。[S051: rows][S050: viewer rows]
-- 核心优势：2M context、实时/工具产品生态、偏低价格。
-- 核心短板：闭源架构与安全细节有限；LMArena 4.20 条目部分可能 preliminary。
-- 与其他模型关键区别：xAI 把大上下文与低幻觉/prompt adherence 作为 API 卖点。[S024: API table]
-- 未公开信息：参数、训练数据、专家、具体 multi-agent 是否底层架构。
-- claim-to-source map：C012->S024。
+## 基本信息
 
+- 最新公开模型：xAI API 表列出 Grok 4.20 reasoning 与 non-reasoning 变体。[S024: API table]
+- 开放程度：闭源；通过 xAI API 提供。[S024: API table]
+
+## 模型结构（官方披露）
+
+| field | Grok 4.20 官方结构信息 |
+|---|---|
+| architecture family | Grok API model；底层 transformer/MoE 结构官方未披露。[S024: API table] |
+| dense/MoE | 官方未披露。[S024: API table] |
+| total params | 官方未披露。[S024: API table] |
+| active params | 官方未披露。[S024: API table] |
+| layers | 官方未披露。[S024: API table] |
+| hidden size | 官方未披露。[S024: API table] |
+| attention mechanism | 官方未披露。[S024: API table] |
+| positional encoding | 官方未披露。[S024: API table] |
+| experts/router | 官方未披露。[S024: API table] |
+| context window | API 表列出 2M context。[S024: API table] |
+| tokenizer/vocab | 官方未披露。[S024: API table] |
+| modal encoder | API pricing 中出现 image token 项；底层视觉编码器官方未披露。[S024: API table] |
+| output heads/modalities | 文本输出；其他产品能力不作为内部 head 结构记录。[S024: API table] |
+| reasoning/test-time structure | 公开 reasoning 与 non-reasoning 变体；内部 reasoning 结构官方未披露。[S024: API table] |
+| deployment formats | xAI API。[S024: API table] |
+| officially undisclosed | 参数、层数、hidden size、attention、positional encoding、experts/router、tokenizer/vocab、训练和后训练配方。[S024: API table] |
+
+## 推理/产品系统结构
+
+Grok 4.20 的公开差异主要是 reasoning/non-reasoning 变体和 2M context API 规格，不能据此推导内部网络结构。[S024: API table]
+
+## LMArena 最新表现
+
+见 `data/lmarena_latest.csv`；LMArena 不提供 Grok 4.20 的内部结构字段。[S050: schema]
+
+## 核心优势
+
+官方公开的显著能力是超长 2M context 与 reasoning/non-reasoning API 变体。[S024: API table]
+
+## 核心短板
+
+除接口规格外，底层结构几乎全部官方未披露。[S024: API table]
+
+## 与其他模型的关键区别
+
+Grok 以 API 长上下文规格突出；开放权重模型则可在官方 config 或 model card 中审计专家、层数、hidden size 等字段。[S027: config.json][S032: config.json]
+
+## 未公开信息
+
+底层模型结构、参数、active params、层数、hidden size、attention、positional encoding、experts/router、tokenizer/vocab、训练与后训练配方均官方未披露。[S024: API table]
+
+## claim-to-source map
+
+- C012 -> S024

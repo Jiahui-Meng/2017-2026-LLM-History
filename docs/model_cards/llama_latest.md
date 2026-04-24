@@ -1,17 +1,56 @@
-# Meta / Llama 最新模型卡
+# Meta Llama 最新模型卡：Llama 4 Scout / Maverick
 
-- 最新模型名称：产品线为 Muse Spark；开放权重线为 Llama 4 Scout/Maverick。[S011: Takeaways][S013: Llama specs]
-- 发布时间：Muse Spark 2026-04-08；Llama 4 Scout/Maverick source pages为 2025/2026 发布信息，需按官方 model card 更新。[S011: header][S013: header]
-- 开放程度：Muse Spark 闭源/私测 API；Llama 4 open-weight under Llama Community License。[S011: Looking Ahead][S012: context table]
-- 架构：Muse Spark 官方未披露；Llama 4 Scout/Maverick 是 MoE、多模态、多语言。[S013: Llama specs]
-- 预训练：Muse 官方未披露；Llama 完整数据配比需 model card/technical report 补齐。
-- 后训练：Muse 官方强调健康、视觉编码、shopping/context 产品体验，未披露完整后训练配方。[S011: Ask Meta AI]
-- 推理方式：Meta AI 支持 Instant/Thinking modes、并行 subagents 产品体验；Llama 可本地部署。[S011: What Changed][S013: Llama specs]
-- 微调/部署：Llama 4 可 Hugging Face/llama.com/NIM；Muse 私测 API 给 selected partners。[S011: Takeaways][S012: context table]
-- LMArena 最新表现：Muse Spark 在 text_style_control 2026-04-14/17 快照中位居前列；Llama 4 相关榜单需按具体 model_name 重抓。[S050: dataset card]
-- 核心优势：Meta 产品分发；Llama 4 提供极长上下文开放权重 MoE。[S011: Takeaways][S013: Llama specs]
-- 核心短板：Muse 闭源且架构未知；Llama license 非 OSI 标准开源。
-- 与其他模型关键区别：Meta 同时押注闭源消费产品与开放权重生态。
-- 未公开信息：Muse 参数/训练/context；Llama 完整训练数据配比。
-- claim-to-source map：C005->S011；C006->S012/S013。
+## 基本信息
 
+- 最新公开开放权重主线：Llama 4 Scout 与 Llama 4 Maverick，均为 image-text-to-text MoE 模型。[S033: model card][S034: model card]
+- 开放程度：开放权重、Hugging Face gated access，许可证为 Llama 社区/自定义许可元数据。[S033: model card][S034: model card]
+
+## 模型结构（官方披露）
+
+| field | Llama 4 Maverick | Llama 4 Scout |
+|---|---|---|
+| architecture family | llama4 image-text-to-text。[S033: model card] | llama4 image-text-to-text。[S034: model card] |
+| dense/MoE | MoE。[S033: model card] | MoE。[S034: model card] |
+| total params | HF metadata 约 401.6B；公开规格约 400B。[S033: model card][S012: context table] | 109B。[S034: model card][S012: context table] |
+| active params | 17B public active naming。[S033: model card] | 17B public active naming。[S034: model card] |
+| layers | 官方未披露。[S033: model card] | 官方未披露。[S034: model card] |
+| hidden size | 官方未披露。[S033: model card] | 官方未披露。[S034: model card] |
+| attention mechanism | 官方未披露。[S033: model card] | 官方未披露。[S034: model card] |
+| positional encoding | 官方未披露。[S033: model card] | 官方未披露。[S034: model card] |
+| experts/router | 128E；router/top-k 细节官方未披露。[S033: model card][S012: context table] | 16E；router/top-k 细节官方未披露。[S034: model card][S012: context table] |
+| context window | 1M。[S012: context table] | 10M。[S012: context table] |
+| tokenizer/vocab | 官方未披露。[S033: model card] | 官方未披露。[S034: model card] |
+| modal encoder | 图像+文本输入；视觉编码器层数/hidden size 官方未披露。[S033: model card] | 图像+文本输入；视觉编码器层数/hidden size 官方未披露。[S034: model card] |
+| output heads/modalities | 文本输出。[S033: model card] | 文本输出。[S034: model card] |
+| reasoning/test-time structure | 官方未披露。[S033: model card] | 官方未披露。[S034: model card] |
+| deployment formats | Hugging Face gated repo、推理平台、本地开放权重部署，受许可约束。[S033: model card] | Hugging Face gated repo、推理平台、本地开放权重部署，受许可约束。[S034: model card] |
+| officially undisclosed | layers、hidden size、attention、positional encoding、tokenizer/vocab、vision encoder 细节、完整训练/后训练配方。[S033: model card] | layers、hidden size、attention、positional encoding、tokenizer/vocab、vision encoder 细节、完整训练/后训练配方。[S034: model card] |
+
+## 推理/产品系统结构
+
+Llama 4 的官方公开重点是 open-weight MoE、多模态输入和超长上下文。与 Meta Muse Spark 的产品 subagents 不同，Llama 4 模型卡不把 agent workflow 写成底层结构。[S011: Muse Spark][S033: model card][S034: model card]
+
+## LMArena 最新表现
+
+见 `data/lmarena_latest.csv`。LMArena 可比较人类偏好，但不能补出 Llama 4 未披露的层数和 attention 结构。[S050: schema]
+
+## 核心优势
+
+开放权重、多模态、MoE、17B active naming，以及 Scout 的 10M context 和 Maverick 的 128E 规模。[S012: context table][S033: model card][S034: model card]
+
+## 核心短板
+
+相较 Kimi/Qwen/DeepSeek/GLM 的 config.json，Llama 4 gated model card 未公开层数、hidden size、attention、tokenizer/vocab 和视觉塔细节。[S027: config.json][S028: config.json][S030: config.json][S032: config.json]
+
+## 与其他模型的关键区别
+
+Llama 4 是少数同时公开 open-weight、MoE、17B active naming 与百万级/千万级 context 的主流模型；但结构可审计粒度低于 config 公开更完整的 Qwen、DeepSeek、Kimi、GLM。[S012: context table][S030: config.json][S032: config.json]
+
+## 未公开信息
+
+layers、hidden size、attention mechanism、positional encoding、tokenizer/vocab、vision encoder 细节、router/top-k、完整训练数据、优化器和后训练配方官方未披露。[S033: model card][S034: model card]
+
+## claim-to-source map
+
+- C006 -> S033, S034, S012
+- C021 -> S033, S012

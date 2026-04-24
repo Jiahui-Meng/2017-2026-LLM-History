@@ -20,15 +20,15 @@ claims:
     sources: ["S011: Takeaways", "S011: What Changed"]
     confidence: high
   - id: C006
-    claim: "Llama 4 Scout/Maverick are MoE multimodal open-weight models; Scout 109B total/17B active/16 experts/10M context; Maverick 400B total/17B active/128 experts/1M context."
-    sources: ["S013: Llama specs", "S012: context table"]
+    claim: "Llama 4 Scout/Maverick official model cards identify MoE multimodal open-weight models; Scout is 109B total/17B active/16E/10M context; Maverick is about 400B total/17B active/128E/1M context."
+    sources: ["S033: model card", "S034: model card", "S012: context table"]
     confidence: high
   - id: C007
     claim: "DeepSeek-V3.2 is V3.2-Exp successor, released with V3.2-Speciale and thinking in tool-use."
     sources: ["S014: Release"]
     confidence: high
   - id: C008
-    claim: "DeepSeek-V3 lineage uses 671B total, 37B active, MLA, DeepSeekMoE, auxiliary-loss-free load balancing, MTP, and 14.8T pretraining tokens."
+    claim: "DeepSeek-V3 technical report/repository describes the earlier V3 architecture with 671B total, 37B active, MLA, DeepSeekMoE, auxiliary-loss-free load balancing, MTP, and 14.8T pretraining tokens; those numbers are background and are not used as undisclosed V3.2 fields."
     sources: ["S015: Model Summary"]
     confidence: high
   - id: C009
@@ -55,4 +55,35 @@ claims:
     claim: "LMArena is a human preference leaderboard with schema including rank, rating, rating_lower, rating_upper, vote_count, category, model_name, leaderboard_publish_date."
     sources: ["S050: Schema"]
     confidence: high
-
+  - id: C015
+    claim: "Kimi K2.6 config identifies KimiK25ForConditionalGeneration with text_config using 61 hidden layers, hidden size 7168, 384 routed experts, 8 experts per token, 1 shared expert, 262144 max positions, vocab size 163840, and a vision tower with 27 layers and hidden size 1152."
+    sources: ["S027: config.json"]
+    confidence: high
+  - id: C016
+    claim: "DeepSeek-V3.2 config identifies DeepseekV32ForCausalLM with 61 hidden layers, hidden size 7168, 256 routed experts, 8 experts per token, 1 shared expert, 163840 max positions, vocab size 129280, MLA-style q/k/v low-rank fields, DSA index fields, YaRN RoPE scaling, and FP8 quantization config."
+    sources: ["S028: config.json"]
+    confidence: high
+  - id: C017
+    claim: "MiniMax-M2.1 config identifies MiniMaxM2ForCausalLM with 62 layers, hidden size 3072, 48 attention heads, 8 key-value heads, 256 local experts, 8 experts per token, 196608 max positions, vocab size 200064, MTP enabled, and FP8 quantization config."
+    sources: ["S029: config.json"]
+    confidence: high
+  - id: C018
+    claim: "Qwen3.5-397B-A17B config identifies Qwen3_5MoeForConditionalGeneration with text hidden size 4096, 60 text layers, 512 experts, 10 experts per token, 262144 max positions, vocab size 248320, alternating linear_attention/full_attention layer types, and a 27-layer vision config."
+    sources: ["S030: config.json"]
+    confidence: high
+  - id: C019
+    claim: "Qwen3.6-35B-A3B config identifies Qwen3_5MoeForConditionalGeneration with text hidden size 2048, 40 text layers, 256 experts, 8 experts per token, 262144 max positions, vocab size 248320, alternating linear_attention/full_attention layer types, and a 27-layer vision config."
+    sources: ["S031: config.json"]
+    confidence: high
+  - id: C020
+    claim: "GLM-5.1 config identifies GlmMoeDsaForCausalLM with 78 layers, hidden size 6144, 256 routed experts, 8 experts per token, 1 shared expert, 202752 max positions, vocab size 154880, DSA index fields, RoPE parameters, and bf16 dtype."
+    sources: ["S032: config.json"]
+    confidence: high
+  - id: C021
+    claim: "Llama 4 Maverick official/HF metadata identifies llama4 image-text-to-text architecture with about 401.6B parameters, 17B active naming, 128E, gated access, and Llama Community-style license metadata."
+    sources: ["S033: model card", "S012: context table"]
+    confidence: high
+  - id: C022
+    claim: "Mistral Large 3 official docs identify a sparse MoE multimodal model with 675B total parameters, 41B active parameters, 256k context, Apache 2.0 license, and Mistral 3 open-weight release."
+    sources: ["S025: Mistral Large 3", "S026: docs", "S035: model card"]
+    confidence: high

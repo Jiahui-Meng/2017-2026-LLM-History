@@ -41,7 +41,7 @@ LMArena 是人类偏好盲测，不是绝对智能测验；rating、置信区间
 
 ## 架构 vs LMArena 分析
 
-LMArena 高分和架构没有单因果关系。MoE 开放模型可以上榜，但 text_style_control 前列仍有大量闭源、参数未知模型；WebDev 高分更可能来自后训练、工具调用稳定性、测试时计算和产品脚手架；Vision/Text-to-Image 榜单受视觉 encoder、图像生成模型和安全/审美后训练影响更大。[S050: Subsets][S052: webdev latest][S053: text_to_image latest][S054: vision latest]
+LMArena 高分和架构没有单因果关系。MoE 开放模型可以上榜，但 text_style_control 前列仍有大量闭源、参数未知模型；WebDev 高分通常还受后训练、工具调用稳定性、测试时计算和产品脚手架影响；Vision/Text-to-Image 榜单受视觉 encoder、图像生成模型和安全/审美后训练影响更大。[S050: Subsets][S052: webdev latest][S053: text_to_image latest][S054: vision latest]
 
 ## 未公开信息清单
 
@@ -49,7 +49,7 @@ OpenAI GPT-5.5/GPT-5.4、Claude Opus 4.7、Gemini 3.1/3、Grok 4.20、Muse Spark
 
 ## Citation Audit 摘要
 
-本库共建立 50+ 条 claim 记录，关键事实映射到 `data/claims.yaml`；高风险项包括闭源参数、LMArena 快照日期、第三方 benchmark 和“agentic/multi-agent”系统边界，详见 `citation_audit.md`。
+本库共建立 claim 记录，关键事实映射到 `data/claims.yaml`；高风险项包括闭源参数、LMArena 快照日期、外部 benchmark 和“agentic/multi-agent”系统边界，详见 `citation_audit.md`。
 
 ## 后续更新方法
 
@@ -69,4 +69,3 @@ OpenAI GPT-5.5/GPT-5.4、Claude Opus 4.7、Gemini 3.1/3、Grok 4.20、Muse Spark
 - `data/models.yaml`
 - `data/sources.yaml`
 - `data/claims.yaml`
-

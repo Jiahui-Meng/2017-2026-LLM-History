@@ -10,5 +10,4 @@ MoE 开放模型在 LMArena 上已经具备竞争力，例如 GLM、DeepSeek、Q
 
 ## 更强解释变量
 
-WebDev 高分往往更可能来自后训练、工具使用训练、前端审美偏好、测试时计算、agent 框架兼容、产品脚手架，而不仅是 base model MoE/dense 架构。[S020: Benchmarks][S023: Agentic Coding][S005: Testing]
-
+WebDev 高分通常还受后训练、工具使用训练、前端审美偏好、测试时计算、agent 框架兼容、产品脚手架影响，而不仅是 base model MoE/dense 架构。[S020: Benchmarks][S023: Agentic Coding][S005: Testing]
