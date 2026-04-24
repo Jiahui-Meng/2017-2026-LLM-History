@@ -1,0 +1,15 @@
+model,org,openness,architecture,params_public,active_params_public,context,modalities,reasoning_controls,tooling,license,citation
+GPT-5.5,OpenAI,closed,official undisclosed,官方未披露,官方未披露,官方未披露,文本/工具/产品多模态能力,Pro parallel test-time compute per system card,ChatGPT/Codex tools,Proprietary,S001;S002;S004
+GPT-5.4,OpenAI,closed,official undisclosed,官方未披露,官方未披露,1M,文本+图像输入,none-low-medium-high-xhigh,computer use/web/file/tool search,Proprietary,S003
+Claude Opus 4.7,Anthropic,closed,hybrid reasoning model,官方未披露,官方未披露,1M,文本+图像输入,effort incl xhigh,Claude Code/task budgets/computer-use workflows,Proprietary,S005;S006
+Gemini 3.1 Pro,Google,closed,official undisclosed multimodal reasoning,官方未披露,官方未披露,1M,文本/图像/视频/音频/PDF输入,Thinking,Search grounding/code execution/function calling,Proprietary,S008;S009;S010
+Muse Spark,Meta,closed/private preview,official undisclosed,官方未披露,官方未披露,官方未披露,文本+图像产品能力,Instant/Thinking product modes,Meta AI subagents/product integrations,Proprietary,S011
+Llama 4 Maverick,Meta,open-weight,MoE multimodal,400B,17B,1M,文本+图像,N/A,local/HF/NIM,Llama Community License,S012;S013
+Kimi K2.6,Moonshot,open-weight/API,MoE native multimodal,1T lineage,32B lineage,256k,文本+视觉,thinking/non-thinking,agent tasks,Modified MIT,S017;S018
+DeepSeek-V3.2,DeepSeek,open-weight/API,MoE + MLA + DSA,671B lineage,37B lineage,官方页未在新闻中披露,文本,thinking mode/tool-use thinking,API/app/web,MIT,S014;S015;S016
+Qwen3.5-397B-A17B,Qwen,open-weight,MoE/hybrid,397B,17B,262k reported in model family docs,文本+视觉/视频 in family,thinking toggle,HF/ModelScope/DashScope,Apache 2.0,S019
+MiniMax-M2.1,MiniMax,open-weight/API,MoE,230B approx,10B approx,官方卡未在摘录中披露,文本,interleaved thinking,tool calling/agent frameworks,Modified MIT,S020;S021
+GLM-5.1,Z.ai,open-weight/API,official undisclosed on docs page,官方未披露,官方未披露,200k,文本,thinking mode,MCP/function/structured/context cache,MIT,S022
+Grok 4.20,xAI,closed,official undisclosed,官方未披露,官方未披露,2M,文本+图像 token pricing,reasoning/non-reasoning variants,tool calling,Proprietary,S024
+Mistral Large 3,Mistral,open-weight/API,sparse MoE multimodal,675B,41B,256k,文本+图像,reasoning version coming soon,agents/function/OCR/FIM,Apache 2.0,S025;S026
+

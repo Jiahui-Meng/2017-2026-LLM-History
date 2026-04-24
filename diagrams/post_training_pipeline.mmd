@@ -1,0 +1,8 @@
+flowchart LR
+  Base[Base model] --> SFT[SFT / instruction tuning]
+  SFT --> Pref[Preference data]
+  Pref --> RL[RLHF / RLAIF / DPO / GRPO / RLVR]
+  RL --> Tool[Tool-use and agent training]
+  Tool --> Safety[Safety tuning]
+  Safety --> Deploy[Deployed assistant/model]
+

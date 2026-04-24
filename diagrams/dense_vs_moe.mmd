@@ -1,0 +1,12 @@
+flowchart LR
+  subgraph Dense
+    DInput[Token] --> DAll[All parameters active]
+    DAll --> DOut[Output]
+  end
+  subgraph MoE
+    MInput[Token] --> Gate[Router/gate]
+    Gate --> E1[Expert subset]
+    Gate -.inactive.-> E2[Other experts]
+    E1 --> MOut[Output]
+  end
+

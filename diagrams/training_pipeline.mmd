@@ -1,0 +1,7 @@
+flowchart LR
+  Data[Public/licensed/proprietary/synthetic data] --> Pretrain[Pretraining objective]
+  Pretrain --> Stability[Stability methods]
+  Stability --> Base[Base model]
+  Base --> Eval[Base evals]
+  Eval --> Post[Post-training]
+

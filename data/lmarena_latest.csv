@@ -1,0 +1,27 @@
+leaderboard,rank,rating,rating_lower,rating_upper,vote_count,category,model_name,organization,license,leaderboard_publish_date,citation
+text_style_control,1,1504.5,1493.2,1515.9,2618,overall,claude-opus-4-7-thinking,anthropic,Proprietary,2026-04-17,S051
+text_style_control,2,1502.6,1497.5,1507.7,18144,overall,claude-opus-4-6-thinking,anthropic,Proprietary,2026-04-17,S051
+text_style_control,3,1498.5,1488.7,1508.3,3485,overall,claude-opus-4-7,anthropic,Proprietary,2026-04-17,S051
+text_style_control,6,1492.2,1487.4,1497.1,22905,overall,gemini-3.1-pro-preview,google,Proprietary,2026-04-17,S051
+text_style_control,8,1485.0,1479.0,1491.0,12069,overall,grok-4.20-beta1,xai,Proprietary,2026-04-17,S051
+text_style_control,9,1481.6,1475.5,1487.8,11568,overall,gpt-5.4-high,openai,,2026-04-17,S051
+text_style_control,53,1430.3,1426.8,1433.8,47731,overall,kimi-k2-thinking-turbo,moonshot,Modified MIT,2026-04-17,S051
+text_style_control,56,1425.9,1421.9,1429.8,35734,overall,glm-4.6,zai,MIT,2026-04-17,S051
+text_style_control,58,1424.2,1420.5,1428.0,42815,overall,deepseek-v3.2,deepseek,MIT,2026-04-17,S051
+text_style_control,74,1415.9,1409.4,1422.4,11533,overall,qwen3-vl-235b-a22b-instruct,alibaba,Apache 2.0,2026-04-17,S051
+text_style_control,76,1415.4,1411.7,1419.1,40077,overall,mistral-large-3,mistral,Apache 2.0,2026-04-17,S051
+webdev,1,1510,1500,1520,6717,overall,claude-opus-4-5-20251101-thinking-32k,anthropic,Proprietary,2026-01-16,S052
+webdev,3,1477,1461,1493,1691,overall,gpt-5.2-high,openai,Proprietary,2026-01-16,S052
+webdev,4,1467,1459,1475,13138,overall,gemini-3-pro,google,Proprietary,2026-01-16,S052
+webdev,6,1447,1437,1457,4833,overall,glm-4.7,zai,MIT,2026-01-16,S052
+webdev,7,1422,1412,1432,6387,overall,minimax-m2.1-preview,minimax,MIT,2026-01-16,S052
+vision,1,1309,1297,1321,4329,overall,gemini-3-pro,google,Proprietary,2025-12-16,S054
+vision,4,1249,1235,1263,2197,overall,gpt-5.1-high,openai,Proprietary,2025-12-16,S054
+vision,5,1249,1242,1256,65685,overall,gemini-2.5-pro,google,Proprietary,2025-12-16,S054
+text_to_image,1,1238,1234,1242,45800,overall,gpt-image-1.5,openai,Proprietary,2026-01-19,S053
+text_to_image,2,1231,1226,1236,36047,overall,gemini-3-pro-image-preview-2k,google,Proprietary,2026-01-19,S053
+text_to_image,3,1227,1222,1232,76426,overall,gemini-3-pro-image-preview,google,Proprietary,2026-01-19,S053
+document,,,,,,overall,see_latest_split,lmarena,,unknown,S050
+search,,,,,,overall,see_latest_split,lmarena,,unknown,S050
+image_edit,,,,,,overall,see_latest_split,lmarena,,unknown,S050
+

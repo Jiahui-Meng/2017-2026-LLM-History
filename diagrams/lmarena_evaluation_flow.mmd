@@ -1,0 +1,10 @@
+flowchart LR
+  User[Human voter] --> Prompt[Prompt]
+  Prompt --> A[Model A answer]
+  Prompt --> B[Model B answer]
+  A --> Vote[Blind preference vote]
+  B --> Vote
+  Vote --> BT[Bradley-Terry rating]
+  BT --> CI[Rating + confidence interval + vote_count]
+  CI --> Board[Category leaderboard]
+

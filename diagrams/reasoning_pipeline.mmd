@@ -1,0 +1,10 @@
+flowchart TD
+  Prompt[User task] --> Router{Need reasoning?}
+  Router -->|No| Fast[Fast response]
+  Router -->|Yes| Think[Thinking / effort budget]
+  Think --> Tools{Need tools?}
+  Tools -->|Search/file/code/computer| Call[Tool calls]
+  Call --> Verify[Self-check / external results]
+  Tools -->|No| Verify
+  Verify --> Final[Final answer]
+

@@ -1,0 +1,58 @@
+claims:
+  - id: C001
+    claim: "GPT-5.5 is OpenAI's latest public ChatGPT/Codex model as of 2026-04-23, but not launching to API at source time."
+    sources: ["S001: Intro", "S004: rollout"]
+    confidence: high
+  - id: C002
+    claim: "GPT-5.4 supports 1M context and native computer-use capabilities in API/Codex."
+    sources: ["S003: Computer use and vision", "S003: Availability"]
+    confidence: high
+  - id: C003
+    claim: "Claude Opus 4.7 is generally available and adds xhigh effort, task budgets, higher-resolution image support, and improved agentic coding."
+    sources: ["S005: Also launching today", "S005: Testing"]
+    confidence: high
+  - id: C004
+    claim: "Gemini 3 Pro Preview has 1,048,576 input tokens, 65,536 output tokens, multimodal inputs, function calling, search grounding, code execution, and thinking."
+    sources: ["S008: Gemini 3 Pro Preview", "S009: Model table"]
+    confidence: high
+  - id: C005
+    claim: "Muse Spark is Meta's newest Meta AI model and powers Meta AI app/site with multimodal perception and subagent product workflows."
+    sources: ["S011: Takeaways", "S011: What Changed"]
+    confidence: high
+  - id: C006
+    claim: "Llama 4 Scout/Maverick are MoE multimodal open-weight models; Scout 109B total/17B active/16 experts/10M context; Maverick 400B total/17B active/128 experts/1M context."
+    sources: ["S013: Llama specs", "S012: context table"]
+    confidence: high
+  - id: C007
+    claim: "DeepSeek-V3.2 is V3.2-Exp successor, released with V3.2-Speciale and thinking in tool-use."
+    sources: ["S014: Release"]
+    confidence: high
+  - id: C008
+    claim: "DeepSeek-V3 lineage uses 671B total, 37B active, MLA, DeepSeekMoE, auxiliary-loss-free load balancing, MTP, and 14.8T pretraining tokens."
+    sources: ["S015: Model Summary"]
+    confidence: high
+  - id: C009
+    claim: "Kimi K2.6 is latest recommended Kimi model, native multimodal, 256k context, thinking/non-thinking modes."
+    sources: ["S017: Model List"]
+    confidence: high
+  - id: C010
+    claim: "MiniMax-M2.1 is a MoE model around 230B total and 10B active, optimized for coding, tool use, instruction following and long-horizon planning."
+    sources: ["S020: Overview", "S021: Model Overview"]
+    confidence: high
+  - id: C011
+    claim: "GLM-5.1 is Z.ai's latest flagship for long-horizon tasks, 200K context and 128K maximum output tokens."
+    sources: ["S022: Overview"]
+    confidence: high
+  - id: C012
+    claim: "Grok 4.20 reasoning/non-reasoning exposes 2M context in xAI API pricing table."
+    sources: ["S024: API table"]
+    confidence: high
+  - id: C013
+    claim: "Mistral Large 3 is Apache 2.0 open-weight sparse MoE with 675B total and 41B active parameters, 256k context."
+    sources: ["S025: Mistral Large 3", "S026: docs"]
+    confidence: high
+  - id: C014
+    claim: "LMArena is a human preference leaderboard with schema including rank, rating, rating_lower, rating_upper, vote_count, category, model_name, leaderboard_publish_date."
+    sources: ["S050: Schema"]
+    confidence: high
+

@@ -1,0 +1,62 @@
+models:
+  openai:
+    latest_public: "GPT-5.5"
+    api_latest_referenced: "GPT-5.4"
+    openness: "closed"
+    architecture_public: "官方未披露"
+    context: "GPT-5.4 API up to 1M; GPT-5.5 API not launched at source time"
+    citations: ["S001", "S003", "S004"]
+  anthropic:
+    latest_public: "Claude Opus 4.7"
+    openness: "closed"
+    architecture_public: "hybrid reasoning model; 参数/专家官方未披露"
+    context: "1M"
+    citations: ["S005", "S006"]
+  google:
+    latest_public: "Gemini 3.1 Pro / Gemini 3 Pro Preview"
+    openness: "closed"
+    architecture_public: "multimodal reasoning; 参数/专家官方未披露"
+    context: "1,048,576 input tokens for Gemini 3 Pro"
+    citations: ["S008", "S009", "S010"]
+  meta:
+    latest_public: "Muse Spark"
+    open_weight_line: "Llama 4 Scout/Maverick"
+    openness: "Muse closed/private preview; Llama open-weight"
+    citations: ["S011", "S012", "S013"]
+  kimi:
+    latest_public: "kimi-k2.6"
+    openness: "open-weight / Modified MIT"
+    architecture_public: "1T MoE lineage; 32B active in K2 docs; K2.6 native multimodal per model list"
+    context: "256k"
+    citations: ["S017", "S018"]
+  deepseek:
+    latest_public: "DeepSeek-V3.2 / V3.2-Speciale"
+    openness: "MIT/open-weight"
+    architecture_public: "MoE + MLA lineage + DeepSeek Sparse Attention in V3.2-Exp"
+    citations: ["S014", "S015", "S016"]
+  qwen:
+    latest_public: "Qwen3.6-35B-A3B; Qwen3.5-397B-A17B family"
+    openness: "Apache 2.0/open-weight"
+    architecture_public: "MoE/hybrid architecture by model card"
+    citations: ["S019"]
+  minimax:
+    latest_public: "MiniMax-M2.1"
+    openness: "Modified MIT/open-weight"
+    architecture_public: "MoE, approx 230B total / 10B active"
+    citations: ["S020", "S021"]
+  glm:
+    latest_public: "GLM-5.1"
+    openness: "MIT/open-weight/API"
+    architecture_public: "官方页披露 long-horizon model; 第三方 NIM 披露 MoE/DSA，但本库模型卡将其标为非官方补充"
+    citations: ["S022"]
+  grok:
+    latest_public: "Grok 4.20 reasoning/non-reasoning"
+    openness: "closed"
+    architecture_public: "官方未披露；API 披露 2M context and variants"
+    citations: ["S024"]
+  mistral:
+    latest_public: "Mistral Large 3"
+    openness: "Apache 2.0/open-weight"
+    architecture_public: "sparse MoE, 675B total / 41B active"
+    citations: ["S025", "S026"]
+

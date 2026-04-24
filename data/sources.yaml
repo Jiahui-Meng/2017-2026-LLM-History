@@ -1,0 +1,153 @@
+sources:
+  S001:
+    title: "Introducing GPT-5.5"
+    url: "https://openai.com/nb-NO/index/introducing-gpt-5-5/"
+    publisher: "OpenAI"
+    accessed_at: "2026-04-24"
+    notes: "GPT-5.5 release; product positioning and capabilities."
+  S002:
+    title: "GPT-5.5 System Card"
+    url: "https://openai.com/index/gpt-5-5-system-card/"
+    publisher: "OpenAI"
+    accessed_at: "2026-04-24"
+  S003:
+    title: "Introducing GPT-5.4"
+    url: "https://openai.com/index/introducing-gpt-5-4/"
+    publisher: "OpenAI"
+    accessed_at: "2026-04-24"
+  S004:
+    title: "GPT-5.3 and GPT-5.5 in ChatGPT"
+    url: "https://help.openai.com/en/articles/11909943-gpt-53-and-gpt-54-in-chatgpt"
+    publisher: "OpenAI Help Center"
+    accessed_at: "2026-04-24"
+  S005:
+    title: "Introducing Claude Opus 4.7"
+    url: "https://www.anthropic.com/news/claude-opus-4-7"
+    publisher: "Anthropic"
+    accessed_at: "2026-04-24"
+  S006:
+    title: "Claude Opus 4.7 product page"
+    url: "https://www.anthropic.com/claude/opus"
+    publisher: "Anthropic"
+    accessed_at: "2026-04-24"
+  S008:
+    title: "Gemini models"
+    url: "https://ai.google.dev/gemini-api/docs/models"
+    publisher: "Google AI for Developers"
+    accessed_at: "2026-04-24"
+  S009:
+    title: "Gemini 3 Developer Guide"
+    url: "https://ai.google.dev/gemini-api/docs/gemini-3"
+    publisher: "Google AI for Developers"
+    accessed_at: "2026-04-24"
+  S010:
+    title: "Gemini 3.1 Pro"
+    url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/"
+    publisher: "Google"
+    accessed_at: "2026-04-24"
+  S011:
+    title: "Introducing Muse Spark"
+    url: "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/"
+    publisher: "Meta"
+    accessed_at: "2026-04-24"
+  S012:
+    title: "Welcome Llama 4 Maverick & Scout on Hugging Face"
+    url: "https://huggingface.co/blog/llama4-release"
+    publisher: "Hugging Face"
+    accessed_at: "2026-04-24"
+  S013:
+    title: "NVIDIA Accelerates Inference on Meta Llama 4 Scout and Maverick"
+    url: "https://developer.nvidia.com/blog/nvidia-accelerates-inference-on-meta-llama-4-scout-and-maverick/"
+    publisher: "NVIDIA"
+    accessed_at: "2026-04-24"
+  S014:
+    title: "DeepSeek-V3.2 Release"
+    url: "https://api-docs.deepseek.com/news/news251201"
+    publisher: "DeepSeek"
+    accessed_at: "2026-04-24"
+  S015:
+    title: "DeepSeek-V3 repository"
+    url: "https://github.com/deepseek-ai/DeepSeek-V3"
+    publisher: "DeepSeek-AI GitHub"
+    accessed_at: "2026-04-24"
+  S016:
+    title: "Introducing DeepSeek-V3.2-Exp"
+    url: "https://api-docs.deepseek.com/news/news250929"
+    publisher: "DeepSeek"
+    accessed_at: "2026-04-24"
+  S017:
+    title: "Kimi Model List"
+    url: "https://platform.kimi.ai/docs/models"
+    publisher: "Moonshot/Kimi"
+    accessed_at: "2026-04-24"
+  S018:
+    title: "Kimi K2 Quickstart"
+    url: "https://platform.kimi.ai/docs/guide/kimi-k2-quickstart"
+    publisher: "Moonshot/Kimi"
+    accessed_at: "2026-04-24"
+  S019:
+    title: "QwenLM Qwen3.5/Qwen3.6 GitHub"
+    url: "https://github.com/QwenLM/Qwen3.5"
+    publisher: "QwenLM"
+    accessed_at: "2026-04-24"
+  S020:
+    title: "MiniMaxAI/MiniMax-M2.1 model card"
+    url: "https://huggingface.co/MiniMaxAI/MiniMax-M2.1"
+    publisher: "MiniMaxAI / Hugging Face"
+    accessed_at: "2026-04-24"
+  S021:
+    title: "MiniMax M2.1 post-training insights"
+    url: "https://www.minimax.io/news/post-training-experience-and-insights-for-agent-models"
+    publisher: "MiniMax"
+    accessed_at: "2026-04-24"
+  S022:
+    title: "GLM-5.1 Overview"
+    url: "https://docs.z.ai/guides/llm/glm-5.1"
+    publisher: "Z.ai"
+    accessed_at: "2026-04-24"
+  S023:
+    title: "GLM-4.7 Overview"
+    url: "https://docs.z.ai/guides/llm/glm-4.7"
+    publisher: "Z.ai"
+    accessed_at: "2026-04-24"
+  S024:
+    title: "xAI API model table"
+    url: "https://x.ai/api"
+    publisher: "xAI"
+    accessed_at: "2026-04-24"
+  S025:
+    title: "Introducing Mistral 3"
+    url: "https://mistral.ai/news/mistral-3"
+    publisher: "Mistral AI"
+    accessed_at: "2026-04-24"
+  S026:
+    title: "Mistral Large 3 docs"
+    url: "https://docs.mistral.ai/models/mistral-large-3-25-12"
+    publisher: "Mistral AI"
+    accessed_at: "2026-04-24"
+  S050:
+    title: "lmarena-ai/leaderboard-dataset"
+    url: "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+    publisher: "LMArena / Hugging Face"
+    accessed_at: "2026-04-24"
+  S051:
+    title: "LMArena text_style_control latest rows"
+    url: "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset/viewer/text_style_control/latest"
+    publisher: "LMArena / Hugging Face"
+    accessed_at: "2026-04-24"
+  S052:
+    title: "LMArena Code/WebDev leaderboard"
+    url: "https://llmarena.ai/leaderboard/code"
+    publisher: "LMArena"
+    accessed_at: "2026-04-24"
+  S053:
+    title: "LMArena Text-to-Image leaderboard"
+    url: "https://lmarena.ai/leaderboard/text-to-image"
+    publisher: "LMArena"
+    accessed_at: "2026-04-24"
+  S054:
+    title: "LMArena Vision leaderboard"
+    url: "https://llmarena.ai/leaderboard/vision"
+    publisher: "LMArena"
+    accessed_at: "2026-04-24"
+
