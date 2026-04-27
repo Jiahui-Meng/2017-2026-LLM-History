@@ -2,6 +2,13 @@
 
 本页只记录官方披露的结构事实。闭源模型不填参数、层数、attention 或专家数量；开放权重模型也只填官方 config/model card 明确给出的字段。工具调用、搜索、computer use、MCP、subagents、Codex/Claude Code 等放在“推理/产品系统结构”，不写成 base model 内部结构。
 
+## 先看结构演进主线
+
+1. `早期主流是 dense Transformer。` 从 Transformer 到 GPT-3，核心矛盾是如何扩大容量，同时保持训练可行。[S036][S037][S040]
+2. `2023 以后 MoE 进入主流。` Mixtral 先把 sparse MoE 打成开源标配，后续 DeepSeek、Qwen、Kimi、MiniMax、GLM、Llama 4、Mistral Large 3 全部沿不同方式跟进。[S056][S028][S030][S031][S029][S032][S033][S035]
+3. `attention 不再只有一种写法。` Qwen 公开 hybrid attention；DeepSeek/GLM 公开 MLA/DSA 风格字段；MiniMax 公开 qk_norm 与 KV 头配置。[S028][S029][S030][S031][S032]
+4. `多模态已进入结构层。` Kimi、Qwen、Llama 4 明确把 vision 结构或 image-text-to-text 路线写进公开配置/模型卡；闭源家族多只公开能力层，不公开内部编码器。[S027][S030][S031][S033][S034]
+
 ## 总览矩阵
 
 | 模型 | architecture family | dense/MoE | 参数规模 | 层数 / hidden size | attention / position | experts/router | context / vocab | 多模态结构 | 未披露重点 |

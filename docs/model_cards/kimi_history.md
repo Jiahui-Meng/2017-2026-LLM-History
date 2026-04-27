@@ -10,6 +10,11 @@ Kimi 的路线起点是“长上下文可用性”，后期逐渐演进到“多
 | 2025 | Kimi K2 | 从长文本助手升级为 agent 任务模型 | 原生多模态与工具导向工作流。[S018] |
 | 2026 | Kimi K2.6 | 推理模式、上下文、模态与结构继续强化 | thinking/non-thinking、256k context、MoE、多模态配置。[S017][S027] |
 
+## 架构创新摘要
+
+- `Kimi K2.6` 不是只有长上下文，它还公开了 MoE、vision tower、patch 结构和 DeepSeekV3-style text config 字段。[S027]
+- 和 DeepSeek 相比，Kimi 把多模态结构公开得更完整；和 Qwen 相比，它更强调 agent 任务入口和 thinking/non-thinking 产品化。[S017][S027]
+
 ## 每代的核心创新
 
 - `早期 Kimi`：让长上下文成为产品入口，而不是论文能力展示。[S061]

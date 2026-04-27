@@ -10,6 +10,15 @@
 4. `开源竞赛期 (2023-2024)`：Llama 2、Mixtral、Gemini 1.5、Qwen2.5、DeepSeek-V3 让 open-weight、MoE、长上下文、多模态成为主线竞争点。[S048][S049][S056][S059][S015]
 5. `推理与 Agent 期 (2025-2026)`：Claude 4.x、Gemini 3、Llama 4、Kimi K2.6、DeepSeek-R1/V3.2、Qwen3.x 把 reasoning、tool use、长程执行、MoE 工程化推到台前。[S005][S009][S014][S017][S033][S060]
 
+## 架构演进速览
+
+从架构角度看，LLM 历史并不是“参数越来越大”这么简单，而是至少经历了 4 条并行演进线：
+
+1. `Dense Transformer`：GPT-1、GPT-3、BERT、T5 代表的早期主流路线，特点是每个 token 都激活同一套参数，结构简单、训练稳定，但扩总容量的成本很高。[S036][S037][S038][S039][S040]
+2. `Sparse MoE`：Mixtral、DeepSeek、Qwen3.x、Kimi K2.6、MiniMax-M2.1、GLM-5.1、Llama 4、Mistral Large 3 把“总参数大、激活参数小”做成主流工程选择。[S056][S028][S030][S031][S029][S032][S033][S035]
+3. `Attention 结构分化`：从标准 full self-attention 走向 Qwen 的 hybrid attention、DeepSeek/GLM 的 MLA/DSA 路线，以及不同 RoPE/YaRN/mRoPE 设计。[S036][S028][S030][S031][S032]
+4. `多模态与产品系统分层`：Llama 4、Qwen3.x、Kimi K2.6 等把 vision 结构写进模型配置；而 ChatGPT、Claude Code、Muse Spark 这类产品系统则需要和 base model 架构分开看。[S011][S027][S030][S033]
+
 ## 全局时间线总览
 
 | 时间 | 节点 | 提升 | 创新 | 行业影响 |
@@ -56,6 +65,7 @@
 ## 创新专题
 
 - [全局时间线详解](docs/llm_timeline.md)
+- [模型架构创新专题](docs/architecture_innovations.md)
 - [预训练路线演进](docs/pretraining.md)
 - [后训练路线演进](docs/post_training.md)
 - [推理模型演进](docs/reasoning_models.md)
@@ -66,10 +76,12 @@
 
 - [时间线总表](tables/timeline_overview.md)
 - [创新矩阵表](tables/innovation_matrix.md)
+- [架构创新矩阵](tables/architecture_innovation_matrix.md)
 - [架构结构表（附录）](tables/architecture_comparison.md)
 - [时间线与范式跃迁图](diagrams/llm_taxonomy.mmd)
 - [家族分叉图](diagrams/family_branches.mmd)
 - [Dense vs MoE 结构示意](diagrams/dense_vs_moe.mmd)
+- [Attention 演进图](diagrams/attention_evolution.mmd)
 
 ## 附录
 

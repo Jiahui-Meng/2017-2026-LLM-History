@@ -139,3 +139,24 @@ claims:
     impact: "展示了模型路线和产品系统路线的分叉。"
     sources: ["S011", "S033", "S034"]
     confidence: high
+  - id: C021
+    claim: "LLM 架构主线已从早期 dense Transformer 扩展到 sparse MoE、多路线 attention 和更显式的多模态骨架。"
+    improvement: "总容量、推理效率、长上下文和多模态整合能力都更强。"
+    innovation: "dense -> MoE -> diversified attention structures"
+    impact: "2025-2026 的前沿开源模型已不再共享同一种结构模板。"
+    sources: ["S036", "S056", "S028", "S030", "S031", "S033"]
+    confidence: high
+  - id: C022
+    claim: "Qwen3.x 公开 alternating linear_attention 与 full_attention，说明 attention 已成为可分层设计的结构变量。"
+    improvement: "兼顾长上下文、推理效率与模型容量。"
+    innovation: "hybrid attention"
+    impact: "attention 不再只是标准 full attention 的单一路线。"
+    sources: ["S030", "S031"]
+    confidence: high
+  - id: C023
+    claim: "DeepSeek-V3.2 与 GLM-5.1 都公开了 DSA/MLA 风格字段，表明 attention/KV 效率已成为开源前沿结构创新重点。"
+    improvement: "长上下文与推理效率更可工程化优化。"
+    innovation: "MLA / DSA"
+    impact: "结构创新不再只围绕参数规模和专家数量展开。"
+    sources: ["S028", "S032"]
+    confidence: high

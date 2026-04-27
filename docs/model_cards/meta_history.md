@@ -11,6 +11,12 @@ Meta 需要拆成两条线来看：`Llama` 是开放权重基础模型主线，`
 | 2024 | Llama 3 | 能力、生态和产品整合度提升 | 更成熟的开源生态主线。[S055] |
 | 2025-2026 | Llama 4 Scout / Maverick | 多模态、MoE、极长上下文推进 | image-text-to-text + MoE。[S033][S034] |
 
+## 架构创新摘要
+
+- `Llama 1-3` 的历史价值更多在高质量 open-weight 生态扩张。
+- `Llama 4` 则明确进入 MoE 多模态阶段，但公开粒度仍低于 DeepSeek、Qwen、Kimi 这类 config 更透明的家族。[S033][S034]
+- `Muse Spark` 不是 Llama 4 的架构延长线，而是产品系统路线。[S011]
+
 ## Llama 路线的核心创新
 
 - `LLaMA / Llama 2`：把“高质量 open-weight foundation model”变成全球生态的主干之一。[S049]
