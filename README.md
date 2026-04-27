@@ -1,71 +1,80 @@
-# 2025-2026 最新大语言模型架构与能力图谱
+# 2017-2026 LLM 发展时间线与创新图谱
 
-本项目是一个中文研究库，聚焦 2025-2026 公开可核验的主流大语言模型：OpenAI GPT/ChatGPT/o 系列、Anthropic Claude、Google Gemini、Meta Muse/Llama、Moonshot Kimi、DeepSeek、Qwen、MiniMax、Z.ai/GLM、xAI Grok、Mistral。所有关键事实按 claim-level citation 标注；闭源模型未披露的参数、专家数、训练数据规模等均写为“官方未披露”，不做猜测。[S001: GPT-5.5 release][S050: dataset card]
+本项目从“最新模型横向对比”重构为“LLM 发展史时间线”。核心问题不再是“现在谁最新”，而是“每一代关键模型出现时，它比上一代提升了什么、创新是什么、又留下了什么问题”。项目覆盖 OpenAI、Anthropic Claude、Google Gemini、Meta/Llama、Kimi、DeepSeek、Qwen，以及 MiniMax、GLM、xAI、Mistral 等主流路线；闭源模型继续坚持“官方未披露就明确写未披露”，不拿二手猜测补空白。[S036][S041][S045][S050]
 
-## 最新模型清单
+## 五个阶段
 
-| 机构 | 最新公开模型/路线 | 开放程度 | 关键定位 |
-|---|---|---:|---|
-| OpenAI | GPT-5.5；API 侧最新稳定主线仍需区分 GPT-5.4 | 闭源 | 复杂真实工作、工具使用、代码、研究；GPT-5.5 暂未同步 API 发布。[S001: Intro][S004: ChatGPT rollout] |
-| Anthropic | Claude Opus 4.7 | 闭源 | 混合推理、长程编码代理、1M context、xhigh effort。[S005: Also launching today][S006: product page] |
-| Google | Gemini 3.1 Pro / Gemini 3 Pro family | 闭源 | 多模态、长上下文、grounding、工具与 coding。[S010: launch][S009: Meet Gemini 3] |
-| Meta | Muse Spark；开放权重路线为 Llama 4 Scout/Maverick | Muse 闭源/私测 API；Llama 开放权重 | 消费级 Meta AI 与多代理产品系统；Llama 4 是 MoE 多模态开放权重。[S011: Takeaways][S013: Llama specs] |
-| Moonshot/Kimi | kimi-k2.6 | Modified MIT/open-weight + 托管 API | 原生多模态 agentic、thinking/non-thinking、256k context。[S017: Model List] |
-| DeepSeek | DeepSeek-V3.2 / V3.2-Speciale | MIT/open-weight | MoE + MLA/DSA、reasoning-first、thinking in tool-use。[S014: Release] |
-| Qwen | Qwen3.6-35B-A3B；旗舰仍含 Qwen3.5-397B-A17B | Apache 2.0/open-weight | 高效 MoE、混合注意力、长上下文、多语言。[S019: News] |
-| MiniMax | MiniMax-M2.1 | Modified MIT/open-weight | 230B/10B active MoE，面向 coding、tool use、long-horizon agent。[S020: Overview] |
-| Z.ai/GLM | GLM-5.1 | MIT/open-weight/API | 长程 8 小时自主工程任务、200k context、工具使用。[S022: Overview] |
-| xAI | Grok 4.20 reasoning/non-reasoning | 闭源 | 2M context、低幻觉、prompt adherence、工具调用。[S024: API table] |
-| Mistral | Mistral Large 3 / Mistral 3 family | Apache 2.0/open-weight | 675B/41B active sparse MoE，多模态、多语言、企业自部署。[S025: Mistral Large 3] |
+1. `Transformer 基础期 (2017-2019)`：先解决“怎么更好地建模序列和通用文本表示”，代表节点是 Transformer、GPT-1、BERT、T5。[S036][S037][S038][S039]
+2. `规模涌现期 (2020-2021)`：参数、数据和算力一起放大，GPT-3 证明 few-shot 能力会随规模出现；FLAN 则说明“会做任务”不只靠预训练，也靠指令化后训练。[S040][S041][S042]
+3. `对齐与聊天期 (2022-2023)`：InstructGPT、ChatGPT、Claude 把“能生成”推进到“能听懂人类意图、连续对话、遵守约束”。[S043][S045][S046]
+4. `开源竞赛期 (2023-2024)`：Llama 2、Mixtral、Gemini 1.5、Qwen2.5、DeepSeek-V3 让 open-weight、MoE、长上下文、多模态成为主线竞争点。[S048][S049][S056][S059][S015]
+5. `推理与 Agent 期 (2025-2026)`：Claude 4.x、Gemini 3、Llama 4、Kimi K2.6、DeepSeek-R1/V3.2、Qwen3.x 把 reasoning、tool use、长程执行、MoE 工程化推到台前。[S005][S009][S014][S017][S033][S060]
 
-## 十大最新技术趋势
+## 全局时间线总览
 
-1. Frontier 模型从“单次问答”转向 long-horizon agent：GPT-5.5、Claude Opus 4.7、GLM-5.1、Kimi K2.6 都强调计划、工具、验证和持续执行。[S001: Intro][S005: Testing][S022: Overview][S017: Model List]
-2. MoE 成为开放权重 frontier 主流：DeepSeek、Llama 4、Kimi、Qwen、MiniMax、GLM、Mistral Large 3 均公开采用稀疏专家路线。[S014: Release][S013: Llama specs][S020: Overview][S025: Mistral Large 3]
-3. 闭源 frontier 不再披露参数规模：OpenAI、Anthropic、Google、xAI 的最新模型官方材料未公开总参数、激活参数和专家数。[S001: Intro][S005: Intro][S009: Meet Gemini 3][S024: API table]
-4. 推理时计算产品化：OpenAI Pro/Thinking、Claude effort、Gemini Thinking、Kimi thinking/non-thinking、GLM thinking mode 都把“思考预算”作为接口或产品能力。[S003: GPT-5.4][S005: Also launching today][S009: Meet Gemini 3][S017: Model List][S022: Capability]
-5. 多模态从“视觉插件”变为原生能力：Gemini 3、Muse Spark、Kimi K2.6、Mistral Large 3、Llama 4 都强调文本+图像/视频/PDF 的统一处理。[S009: Model table][S011: Ask Meta AI][S017: Model List][S025: Mistral Large 3][S013: Llama specs]
-6. 长上下文进入 1M+ 时代，但实现路径不同：Gemini 3 为 1M 输入，OpenAI GPT-5.4 API 为 1M，Claude Opus 4.7 产品页称 1M，Grok 4.20 为 2M，Llama 4 Scout 为 10M。[S009: Model table][S003: Computer use][S006: product page][S024: API table][S013: Llama specs]
-7. Attention/KV cache 优化公开化：DeepSeek MLA/DSA、Llama iRoPE/NoPE、Qwen hybrid attention、Mistral sparse MoE serving 都直接服务于长上下文与低成本部署。[S015: Model Summary][S016: DSA][S012: iRoPE][S019: News][S025: NVIDIA collaboration]
-8. 开放权重模型更强调可部署性：Mistral NVFP4、MiniMax FP8/BF16、Kimi INT4、Llama int4 单 H100、GLM/MIT 都在降低企业自托管门槛。[S025: vLLM/NVFP4][S020: model card][S018: K2 overview][S013: Llama specs][S022: Overview]
-9. LMArena 从 Overall 走向多维拆分：text_style_control、webdev、vision、document、search、text_to_image、image_edit 等拆分更能暴露产品系统能力差异。[S050: Subsets]
-10. “架构能力”和“产品系统能力”边界更模糊：搜索 grounding、computer use、file search、tool search、agent swarm、subagents 往往不是裸模型能力，而是模型+工具+路由+安全策略的系统结果。[S003: Tools][S011: subagents][S024: API table]
+| 时间 | 节点 | 提升 | 创新 | 行业影响 |
+|---|---|---|---|---|
+| 2017-06 | Transformer | 抛开 RNN 串行瓶颈，训练并行性和长程依赖处理显著提升 | self-attention + encoder-decoder attention | 成为后续 GPT、BERT、T5、Gemini、Claude、Llama 的共同底座。[S036] |
+| 2018-06 | GPT-1 | 把“先大规模预训练，再任务微调”做成统一范式 | 生成式预训练 | 为 GPT 系列和“语言模型即基础模型”路线定型。[S037] |
+| 2018-10 | BERT | 在理解任务上大幅提升表示质量 | 双向编码器 + MLM | 奠定了 encoder 路线和后续检索/理解型 NLP 基础。[S038] |
+| 2019-10 | T5 | 把多任务统一到 text-to-text 接口 | 统一任务格式 | 影响了 FLAN、instruction tuning 和后来的通用 API 设计。[S039] |
+| 2020-05 | GPT-3 | 少样本能力明显增强 | 通过 scaling 获得 in-context learning | 让“大模型涌现能力”成为行业共识。[S040] |
+| 2021-10 | FLAN | 同等底座下更会按指令做事 | instruction tuning | 证明“后训练范式”能显著改变模型可用性。[S042] |
+| 2022-03 | Chinchilla | 同算力下训练更高效 | compute-optimal scaling law | 改变了“只堆参数”的思路，转向参数与 token 配比优化。[S041] |
+| 2022-12 | ChatGPT / InstructGPT | 更稳定地对话、遵循意图和拒答 | RLHF 产品化 | 把 LLM 从研究对象变成大众产品。[S043] |
+| 2023-03 | GPT-4 | 更强泛化、可靠性和多模态能力 | 更大规模对齐和 system-level deployment | 推高闭源前沿模型的能力上限与安全讨论门槛。[S044] |
+| 2023-03 | Claude / Constitutional AI | 在对齐中更强调规则化、自我批评和无害性 | Constitutional AI | 形成与 RLHF 并列的重要对齐路线。[S045][S046] |
+| 2023-07 | Llama 2 | 高质量 open-weight 路线成型 | 开放权重基础模型 + chat 版 | 极大加速了开源生态和企业自部署。[S049] |
+| 2023-12 | Mixtral 8x7B | 以较低激活成本换更高总容量 | 稀疏 MoE 开源化 | 把 MoE 从研究概念推进到开源主战场。[S056] |
+| 2024-02 | Gemini 1.5 | 超长上下文和原生多模态显著前进 | 1M 级 context + multimodal family | 长上下文从实验能力变成前沿产品能力。[S048] |
+| 2024 | Qwen2 / Qwen2.5 | 中文、多语言、代码与长上下文能力均衡提升 | 系列化 open-weight、工具和多模态布局 | 让 Qwen 成为开源中文与多语言主线之一。[S058][S059] |
+| 2024-12 | DeepSeek-V3 | 以更透明的开源结构追求高能力低成本 | DeepSeekMoE + MLA + MTP | 强化了“开源 frontier 也能做结构创新”的预期。[S015] |
+| 2025-01 | DeepSeek-R1 | 推理能力和过程监督进入新阶段 | reasoning-first RL 路线 | 让行业重新聚焦 test-time compute 与 reasoning 训练。[S057] |
+| 2025-2026 | Claude 4.x | agentic coding、effort、task budget 更强 | 推理预算产品化 | 说明高端模型竞争已从回答质量转向长程执行质量。[S005][S047] |
+| 2025-2026 | Kimi K2.x | 长上下文、多模态、agent 化继续增强 | thinking/non-thinking、原生多模态 agent | Kimi 从“长文本入口”升级为综合 agent 路线。[S017][S018][S061] |
+| 2025-2026 | Qwen3.x | 在开源家族里继续推进 MoE、混合注意力和多模态 | hybrid attention + MoE frontier 化 | 证明开源家族也能持续迭代架构而非只追随闭源。[S019][S030][S031][S060] |
+| 2025-2026 | Llama 4 / Muse Spark | Meta 同时推进开放权重模型和产品系统模型 | MoE 多模态 open-weight + 产品路由/子代理 | 体现“模型路线”和“产品系统路线”开始分叉发展。[S011][S033][S034] |
+| 2025-2026 | Gemini 3 / GPT-5.x / Grok 4.20 / GLM-5.1 / MiniMax-M2.1 / Mistral Large 3 | reasoning、工具、长上下文、部署效率集体升级 | frontier 推理预算、agentic 工具链、稀疏化与部署优化 | 当前竞争焦点已从单次问答转向 long-horizon work。[S001][S005][S009][S020][S022][S024][S025] |
 
-## 核心模型差异总结
+## 主线家族
 
-闭源模型的最大差异已转向推理时计算、工具集成和产品路由，而不是可见参数规模；开放权重模型的最大差异则在 MoE 稀疏度、attention/KV 优化、上下文长度、许可约束和部署格式。DeepSeek 与 Kimi 倾向“巨大 MoE + 低激活 + 长程 agent”；Qwen 与 GLM 强调中文/多语言和工程代理；Mistral 强调 Apache 2.0 与欧洲企业部署；MiniMax 聚焦低激活 coding agent；Meta 同时走 Muse 闭源产品化和 Llama 开放权重路线。[S014: Release][S017: Model List][S019: News][S022: Overview][S025: Mistral Large 3][S020: Overview][S011: Takeaways][S013: Llama specs]
+- [OpenAI 历史页](docs/model_cards/openai_history.md)
+- [Claude 历史页](docs/model_cards/claude_history.md)
+- [Gemini 历史页](docs/model_cards/gemini_history.md)
+- [Meta / Llama 历史页](docs/model_cards/meta_history.md)
+- [Kimi 历史页](docs/model_cards/kimi_history.md)
+- [DeepSeek 历史页](docs/model_cards/deepseek_history.md)
+- [Qwen 历史页](docs/model_cards/qwen_history.md)
 
-## LMArena 最新观察
+## 第二层家族页
 
-LMArena 是人类偏好盲测，不是绝对智能测验；rating、置信区间和 vote_count 必须一起读，preliminary/低票数模型不能只按 rank 下结论。[S050: Notes][S050: Schema] 在 text_style_control/latest 的公开数据中，Claude Opus 4.7 thinking、Claude Opus 4.6 thinking、Gemini 3.1 Pro preview、Grok 4.20、GPT-5.4-high 等模型处于前列，但不同日期快照会变动。[S051: text_style_control latest rows] WebDev 榜单对工具化编码更敏感，Claude Opus thinking、GPT-5.2-high、Gemini 3 Pro、GLM-4.7、MiniMax-M2.1 均靠前。[S052: webdev latest]
+- [MiniMax 历史页](docs/model_cards/minimax_history.md)
+- [GLM 历史页](docs/model_cards/glm_history.md)
+- [Grok 历史页](docs/model_cards/grok_history.md)
+- [Mistral 历史页](docs/model_cards/mistral_history.md)
 
-## 架构 vs LMArena 分析
+## 创新专题
 
-LMArena 高分和架构没有单因果关系。MoE 开放模型可以上榜，但 text_style_control 前列仍有大量闭源、参数未知模型；WebDev 高分通常还受后训练、工具调用稳定性、测试时计算和产品脚手架影响；Vision/Text-to-Image 榜单受视觉 encoder、图像生成模型和安全/审美后训练影响更大。[S050: Subsets][S052: webdev latest][S053: text_to_image latest][S054: vision latest]
+- [全局时间线详解](docs/llm_timeline.md)
+- [预训练路线演进](docs/pretraining.md)
+- [后训练路线演进](docs/post_training.md)
+- [推理模型演进](docs/reasoning_models.md)
+- [多模态模型演进](docs/multimodal_models.md)
+- [Agent 与工具使用演进](docs/agentic_tool_use.md)
 
-## 未公开信息清单
+## 表格与图表
 
-OpenAI GPT-5.5/GPT-5.4、Claude Opus 4.7、Gemini 3.1/3、Grok 4.20、Muse Spark 的参数规模、专家数、训练 token 数、优化器和完整数据配比官方未披露。[S001: Intro][S005: Intro][S010: launch][S024: API table][S011: A New Model] 这些项目在表格中均写为“官方未披露”，只把官方公开的 context、modalities、接口能力和安全/系统卡信息列为事实。
+- [时间线总表](tables/timeline_overview.md)
+- [创新矩阵表](tables/innovation_matrix.md)
+- [架构结构表（附录）](tables/architecture_comparison.md)
+- [时间线与范式跃迁图](diagrams/llm_taxonomy.mmd)
+- [家族分叉图](diagrams/family_branches.mmd)
+- [Dense vs MoE 结构示意](diagrams/dense_vs_moe.mmd)
 
-## Citation Audit 摘要
+## 附录
 
-本库共建立 claim 记录，关键事实映射到 `data/claims.yaml`；高风险项包括闭源参数、LMArena 快照日期、外部 benchmark 和“agentic/multi-agent”系统边界，详见 `citation_audit.md`。
-
-## 后续更新方法
-
-1. 先更新 `data/sources.yaml` 的 `accessed_at` 与新来源。
-2. 用 Hugging Face `lmarena-ai/leaderboard-dataset` 的 `latest` split 重建 `data/lmarena_latest.csv`。[S050: Usage]
-3. 只替换有来源支撑的 claim；闭源参数继续写“官方未披露”。
-4. 重新同步 `tables/` 与 `docs/model_cards/` 中的 claim-to-source map。
-
-## 目录
-
-见各章节：
-
-- `docs/latest_model_landscape.md`
-- `docs/architecture_comparison.md`
-- `docs/lmarena_results.md`
-- `docs/model_cards/`
-- `data/models.yaml`
-- `data/sources.yaml`
-- `data/claims.yaml`
+- [当前格局快照](docs/latest_model_landscape.md)
+- [LMArena 结果](docs/lmarena_results.md)
+- [LMArena 方法论](docs/lmarena_methodology.md)
+- [未公开信息与置信度](docs/unknowns_and_confidence.md)
+- [Citation Audit](citation_audit.md)

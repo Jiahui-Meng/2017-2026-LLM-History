@@ -1,12 +1,24 @@
-# 多模态模型
+# 多模态模型演进
 
-| 模型 | 输入/输出 | 关键事实 |
-|---|---|---|
-| Gemini 3 Pro | 文本、图像、视频、音频、PDF 输入；文本输出 | Gemini 3 Pro Preview 支持 1M input/64k output 与多工具能力。[S009: Model table] |
-| Gemini 3 Pro Image | 图像+文本输入；图像+文本输出 | Gemini 3 Pro Image Preview 是 image generation 模型，65k/32k。[S008: Gemini 3 Pro Image] |
-| Claude Opus 4.7 | 文本+图像输入；文本输出 | 高分辨率图像长边最高 2576 px。[S005: Improved multimodal support] |
-| Muse Spark | 产品层文本+图像 | Meta 强调图像理解、购物、健康和 AI glasses 场景。[S011: Ask Meta AI] |
-| Kimi K2.6 | native multimodal visual+text | 官方 model list 称支持 visual and text input、dialogue and Agent tasks。[S017: Model List] |
-| Mistral Large 3 | 文本+图像 | open-weight general-purpose multimodal model。[S026: docs] |
-| Llama 4 | 文本+图像 | natively multimodal and multilingual MoE models。[S013: Llama specs] |
+多模态路线的发展不是“给文本模型加个图片入口”这么简单，而是逐步从外挂能力走向原生统一建模。
 
+## 早期阶段
+
+- GPT-4 把多模态能力推到主流前沿，但内部视觉结构仍不透明。[S044]
+- Claude 早期支持图像输入，但更强调文档理解、安全和高分辨率输入体验。[S005]
+
+## 长上下文与多模态合流
+
+- Gemini 1.5 把超长上下文与多模态统一推进到主流产品前沿。[S048]
+- Gemini 3 继续扩展文本、图像、视频、音频、PDF 与工具联动能力。[S008][S009]
+
+## Open-weight 多模态的兴起
+
+- Llama 4 明确是 image-text-to-text 的 MoE 多模态家族。[S033][S034]
+- Kimi K2.6 与 Qwen3.x 都公开了视觉相关配置字段，不再只是文本模型加补丁。[S027][S030][S031]
+- Mistral Large 3 与 Muse Spark 代表了“多模态既是模型能力，也是产品体验入口”。[S011][S025][S026]
+
+## 现在的结论
+
+1. 多模态已经从“附加功能”变成前沿家族的默认能力之一。
+2. 真正的差异不只是谁能看图，而是谁能把视觉、长上下文、工具和推理整合成可执行工作流。

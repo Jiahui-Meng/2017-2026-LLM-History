@@ -1,89 +1,141 @@
 claims:
   - id: C001
-    claim: "GPT-5.5 is OpenAI's latest public ChatGPT/Codex model as of 2026-04-23, but not launching to API at source time."
-    sources: ["S001: Intro", "S004: rollout"]
+    claim: "Transformer 用 self-attention 取代循环主干，显著提高了并行训练能力。"
+    improvement: "比 RNN/LSTM 更擅长并行和长程依赖。"
+    innovation: "self-attention"
+    impact: "成为现代 LLM 共同底座。"
+    sources: ["S036"]
     confidence: high
   - id: C002
-    claim: "GPT-5.4 supports 1M context and native computer-use capabilities in API/Codex."
-    sources: ["S003: Computer use and vision", "S003: Availability"]
+    claim: "GPT-1 把 generative pre-training + downstream fine-tuning 变成可复用范式。"
+    improvement: "通用迁移能力更强。"
+    innovation: "generative pre-training"
+    impact: "开启 GPT 家族主线。"
+    sources: ["S037"]
     confidence: high
   - id: C003
-    claim: "Claude Opus 4.7 is generally available and adds xhigh effort, task budgets, higher-resolution image support, and improved agentic coding."
-    sources: ["S005: Also launching today", "S005: Testing"]
+    claim: "BERT 通过双向 MLM 显著提升理解任务表现。"
+    improvement: "理解类任务比单向模型更强。"
+    innovation: "bidirectional masked language modeling"
+    impact: "奠定 encoder / embedding / retrieval 路线。"
+    sources: ["S038"]
     confidence: high
   - id: C004
-    claim: "Gemini 3 Pro Preview has 1,048,576 input tokens, 65,536 output tokens, multimodal inputs, function calling, search grounding, code execution, and thinking."
-    sources: ["S008: Gemini 3 Pro Preview", "S009: Model table"]
+    claim: "T5 把 NLP 任务统一为 text-to-text 接口。"
+    improvement: "多任务迁移和接口设计更统一。"
+    innovation: "text-to-text framework"
+    impact: "影响了 instruction tuning 与后续通用模型接口。"
+    sources: ["S039"]
     confidence: high
   - id: C005
-    claim: "Muse Spark is Meta's newest Meta AI model and powers Meta AI app/site with multimodal perception and subagent product workflows."
-    sources: ["S011: Takeaways", "S011: What Changed"]
+    claim: "GPT-3 证明扩大参数、数据和算力会带来明显的 few-shot 与 in-context learning 能力。"
+    improvement: "比 GPT-1/2 更接近通用任务解决器。"
+    innovation: "scaling-driven emergence"
+    impact: "规模成为行业主方法论。"
+    sources: ["S040"]
     confidence: high
   - id: C006
-    claim: "Llama 4 Scout/Maverick official model cards identify MoE multimodal open-weight models; Scout is 109B total/17B active/16E/10M context; Maverick is about 400B total/17B active/128E/1M context."
-    sources: ["S033: model card", "S034: model card", "S012: context table"]
+    claim: "FLAN 证明 instruction tuning 能大幅提升 zero-shot 能力。"
+    improvement: "模型更会按自然语言任务说明工作。"
+    innovation: "instruction tuning"
+    impact: "后训练从辅助手段变成主线能力。"
+    sources: ["S042"]
     confidence: high
   - id: C007
-    claim: "DeepSeek-V3.2 is V3.2-Exp successor, released with V3.2-Speciale and thinking in tool-use."
-    sources: ["S014: Release"]
+    claim: "Chinchilla 提出 compute-optimal scaling，说明很多大模型参数太大而训练 token 不够。"
+    improvement: "同算力训练效率更优。"
+    innovation: "compute-optimal scaling law"
+    impact: "改变了训练经济学。"
+    sources: ["S041"]
     confidence: high
   - id: C008
-    claim: "DeepSeek-V3 technical report/repository describes the earlier V3 architecture with 671B total, 37B active, MLA, DeepSeekMoE, auxiliary-loss-free load balancing, MTP, and 14.8T pretraining tokens; those numbers are background and are not used as undisclosed V3.2 fields."
-    sources: ["S015: Model Summary"]
+    claim: "InstructGPT 用 RLHF 让模型更好地遵循用户意图，并降低不真实与有害输出。"
+    improvement: "比 GPT-3 更可控、更符合人类偏好。"
+    innovation: "RLHF"
+    impact: "为 ChatGPT 铺平产品化道路。"
+    sources: ["S043"]
     confidence: high
   - id: C009
-    claim: "Kimi K2.6 is latest recommended Kimi model, native multimodal, 256k context, thinking/non-thinking modes."
-    sources: ["S017: Model List"]
+    claim: "Constitutional AI 为 Claude 路线提供了不同于传统 RLHF 的对齐方法。"
+    improvement: "更强调可解释原则、自我批评和无害性。"
+    innovation: "Constitutional AI / RLAIF"
+    impact: "形成与 RLHF 并列的重要对齐路线。"
+    sources: ["S045"]
     confidence: high
   - id: C010
-    claim: "MiniMax-M2.1 is a MoE model around 230B total and 10B active, optimized for coding, tool use, instruction following and long-horizon planning."
-    sources: ["S020: Overview", "S021: Model Overview"]
+    claim: "GPT-4 把多模态与更强系统级安全评估推进到闭源前沿主线。"
+    improvement: "泛化、可靠性和复杂任务能力跃升。"
+    innovation: "frontier closed-model deployment system"
+    impact: "抬高了闭源前沿能力上限。"
+    sources: ["S044"]
     confidence: high
   - id: C011
-    claim: "GLM-5.1 is Z.ai's latest flagship for long-horizon tasks, 200K context and 128K maximum output tokens."
-    sources: ["S022: Overview"]
+    claim: "Llama 2 把高质量 open-weight foundation model 推向主流开发者生态。"
+    improvement: "比早期开源家族更可用、更适合自部署。"
+    innovation: "open foundation and chat family"
+    impact: "加速了开源生态与企业采用。"
+    sources: ["S049"]
     confidence: high
   - id: C012
-    claim: "Grok 4.20 reasoning/non-reasoning exposes 2M context in xAI API pricing table."
-    sources: ["S024: API table"]
+    claim: "Mixtral 8x7B 把 sparse MoE 做成开源主流方向。"
+    improvement: "更高总容量但较低激活成本。"
+    innovation: "sparse MoE"
+    impact: "MoE 成为开源 frontier 的核心路线之一。"
+    sources: ["S056"]
     confidence: high
   - id: C013
-    claim: "Mistral Large 3 is Apache 2.0 open-weight sparse MoE with 675B total and 41B active parameters, 256k context."
-    sources: ["S025: Mistral Large 3", "S026: docs"]
+    claim: "Gemini 1.5 把 1M 级 context 和原生多模态能力推进到主流产品层。"
+    improvement: "比前代在长上下文和多模态上都有明显跃迁。"
+    innovation: "1M context productization"
+    impact: "让长上下文从演示能力走向产品能力。"
+    sources: ["S048"]
     confidence: high
   - id: C014
-    claim: "LMArena is a human preference leaderboard with schema including rank, rating, rating_lower, rating_upper, vote_count, category, model_name, leaderboard_publish_date."
-    sources: ["S050: Schema"]
+    claim: "Qwen2 / Qwen2.5 让 Qwen 成为主流开源中文与多语言家族之一。"
+    improvement: "代码、数学、长上下文和语言覆盖更均衡。"
+    innovation: "rapidly iterating open family"
+    impact: "为 Qwen3 进入 frontier 竞争打下基础。"
+    sources: ["S058", "S059"]
     confidence: high
   - id: C015
-    claim: "Kimi K2.6 config identifies KimiK25ForConditionalGeneration with text_config using 61 hidden layers, hidden size 7168, 384 routed experts, 8 experts per token, 1 shared expert, 262144 max positions, vocab size 163840, and a vision tower with 27 layers and hidden size 1152."
-    sources: ["S027: config.json"]
+    claim: "DeepSeek-V3 把 DeepSeekMoE、MLA 和 MTP 组合成开源 frontier 结构路线。"
+    improvement: "在能力、效率和结构透明度之间取得更强平衡。"
+    innovation: "DeepSeekMoE + MLA + MTP"
+    impact: "增强了开源阵营提出原创结构方案的信心。"
+    sources: ["S015"]
     confidence: high
   - id: C016
-    claim: "DeepSeek-V3.2 config identifies DeepseekV32ForCausalLM with 61 hidden layers, hidden size 7168, 256 routed experts, 8 experts per token, 1 shared expert, 163840 max positions, vocab size 129280, MLA-style q/k/v low-rank fields, DSA index fields, YaRN RoPE scaling, and FP8 quantization config."
-    sources: ["S028: config.json"]
+    claim: "DeepSeek-R1 把 reasoning-first RL 推成行业关注焦点。"
+    improvement: "推理、自我验证和长 CoT 表现更强。"
+    innovation: "reasoning-first RL"
+    impact: "促使行业重新评估推理训练与 test-time compute。"
+    sources: ["S057"]
     confidence: high
   - id: C017
-    claim: "MiniMax-M2.1 config identifies MiniMaxM2ForCausalLM with 62 layers, hidden size 3072, 48 attention heads, 8 key-value heads, 256 local experts, 8 experts per token, 196608 max positions, vocab size 200064, MTP enabled, and FP8 quantization config."
-    sources: ["S029: config.json"]
+    claim: "Claude Opus 4.7 把 xhigh effort、task budget 和 agentic coding 做成公开产品能力。"
+    improvement: "长程执行、视觉和编码代理表现增强。"
+    innovation: "explicit reasoning budget"
+    impact: "让前沿模型竞争转向 long-horizon work。"
+    sources: ["S005", "S006"]
     confidence: high
   - id: C018
-    claim: "Qwen3.5-397B-A17B config identifies Qwen3_5MoeForConditionalGeneration with text hidden size 4096, 60 text layers, 512 experts, 10 experts per token, 262144 max positions, vocab size 248320, alternating linear_attention/full_attention layer types, and a 27-layer vision config."
-    sources: ["S030: config.json"]
+    claim: "Kimi K2.6 把长上下文、多模态、thinking/non-thinking 和 Agent 任务整合进一个家族。"
+    improvement: "比早期长文本助手更接近综合 Agent。"
+    innovation: "native multimodal agent line"
+    impact: "Kimi 从长上下文入口升级为综合工作模型。"
+    sources: ["S017", "S018", "S061"]
     confidence: high
   - id: C019
-    claim: "Qwen3.6-35B-A3B config identifies Qwen3_5MoeForConditionalGeneration with text hidden size 2048, 40 text layers, 256 experts, 8 experts per token, 262144 max positions, vocab size 248320, alternating linear_attention/full_attention layer types, and a 27-layer vision config."
-    sources: ["S031: config.json"]
+    claim: "Qwen3 通过 hybrid thinking modes、MoE 和混合注意力把 Qwen 推向 frontier 架构竞赛。"
+    improvement: "推理和速度可按模式切换。"
+    innovation: "hybrid thinking modes"
+    impact: "说明开源家族也在主动定义推理模型接口。"
+    sources: ["S060", "S030", "S031"]
     confidence: high
   - id: C020
-    claim: "GLM-5.1 config identifies GlmMoeDsaForCausalLM with 78 layers, hidden size 6144, 256 routed experts, 8 experts per token, 1 shared expert, 202752 max positions, vocab size 154880, DSA index fields, RoPE parameters, and bf16 dtype."
-    sources: ["S032: config.json"]
-    confidence: high
-  - id: C021
-    claim: "Llama 4 Maverick official/HF metadata identifies llama4 image-text-to-text architecture with about 401.6B parameters, 17B active naming, 128E, gated access, and Llama Community-style license metadata."
-    sources: ["S033: model card", "S012: context table"]
-    confidence: high
-  - id: C022
-    claim: "Mistral Large 3 official docs identify a sparse MoE multimodal model with 675B total parameters, 41B active parameters, 256k context, Apache 2.0 license, and Mistral 3 open-weight release."
-    sources: ["S025: Mistral Large 3", "S026: docs", "S035: model card"]
+    claim: "Meta 在 2025-2026 同时推进 Llama 4 基础模型路线和 Muse Spark 产品系统路线。"
+    improvement: "基础模型与产品体验分线演进。"
+    innovation: "multimodal MoE open-weight + product routing"
+    impact: "展示了模型路线和产品系统路线的分叉。"
+    sources: ["S011", "S033", "S034"]
     confidence: high

@@ -1,61 +1,105 @@
-models:
+families:
   openai:
-    latest_public: "GPT-5.5"
-    api_latest_referenced: "GPT-5.4"
+    latest_public_node: "GPT-5.5 / GPT-5.4"
+    current_focus: "reasoning budget, computer use, long-context real work"
+    signature_innovations:
+      - "generative pre-training"
+      - "scaling and in-context learning"
+      - "RLHF productization"
+      - "reasoning effort and computer use"
     openness: "closed"
-    architecture_public: "GPT frontier reasoning/product family; 底层模型结构官方未披露"
-    context: "GPT-5.4 API/Codex 1M; GPT-5.5 API not launched at source time"
-    citations: ["S001", "S002", "S003", "S004"]
-  anthropic:
-    latest_public: "Claude Opus 4.7"
+    notes: "底层结构长期未披露，公开重点在产品接口、系统能力和安全评估。"
+  claude:
+    latest_public_node: "Claude Opus 4.7"
+    current_focus: "Constitutional AI, long context, agentic coding, effort/task budget"
+    signature_innovations:
+      - "Constitutional AI"
+      - "long-context assistant"
+      - "agentic coding"
+      - "explicit reasoning budget"
     openness: "closed"
-    architecture_public: "hybrid reasoning model; 参数、专家、层数官方未披露"
-    context: "1M"
-    citations: ["S005", "S006"]
-  google:
-    latest_public: "Gemini 3.1 Pro / Gemini 3 Pro Preview"
+    notes: "家族差异主要体现在对齐路线、上下文、编码代理和产品控制接口。"
+  gemini:
+    latest_public_node: "Gemini 3.1 Pro / Gemini 3 Pro"
+    current_focus: "multimodal reasoning, long context, grounding, code execution"
+    signature_innovations:
+      - "Transformer/T5/FLAN lineage"
+      - "1M context productization"
+      - "native multimodality"
+      - "search grounding"
     openness: "closed"
-    architecture_public: "multimodal reasoning family; 底层模型结构官方未披露"
-    context: "1,048,576 input tokens / 65,536 output tokens for Gemini 3 Pro Preview"
-    citations: ["S008", "S009", "S010"]
+    notes: "Google 路线长期同时影响基础研究范式和产品化多模态模型。"
   meta:
-    latest_public: "Muse Spark"
-    open_weight_line: "Llama 4 Scout / Llama 4 Maverick"
-    openness: "Muse closed/private preview; Llama open-weight gated"
-    architecture_public: "Llama 4 is MoE image-text-to-text; Muse Spark 底层结构官方未披露"
-    citations: ["S011", "S012", "S033", "S034"]
+    latest_public_node: "Llama 4 Scout / Maverick; Muse Spark"
+    current_focus: "open-weight ecosystem plus product-system route"
+    signature_innovations:
+      - "open-weight ecosystem"
+      - "Llama family scaling"
+      - "multimodal MoE"
+      - "product routing via Muse Spark"
+    openness: "mixed"
+    notes: "Llama 与 Muse Spark 必须分开看：前者是基础模型家族，后者是产品系统节点。"
   kimi:
-    latest_public: "Kimi K2.6"
+    latest_public_node: "Kimi K2.6"
+    current_focus: "multimodal agent, thinking modes, long-horizon coding"
+    signature_innovations:
+      - "long-context product positioning"
+      - "agent-oriented model line"
+      - "thinking/non-thinking modes"
+      - "native multimodality"
     openness: "open-weight / API"
-    architecture_public: "KimiK25ForConditionalGeneration; MoE; 61 text layers; 384 routed experts; 262144 max positions"
-    citations: ["S017", "S027"]
+    notes: "Kimi 从长文本入口演进到综合 Agent 模型路线。"
   deepseek:
-    latest_public: "DeepSeek-V3.2 / V3.2-Speciale"
+    latest_public_node: "DeepSeek-V3.2 / DeepSeek-R1"
+    current_focus: "MoE efficiency, MLA/DSA, reasoning RL, tool-use thinking"
+    signature_innovations:
+      - "DeepSeekMoE"
+      - "MLA"
+      - "reasoning-first RL"
+      - "thinking in tool-use"
     openness: "MIT/open-weight/API"
-    architecture_public: "DeepseekV32ForCausalLM; MoE; 61 layers; 256 routed experts; DSA/MLA fields"
-    citations: ["S014", "S028"]
+    notes: "DeepSeek 的创新横跨结构、训练范式和工具推理，不应缩成单一标签。"
   qwen:
-    latest_public: "Qwen3.5-397B-A17B / Qwen3.6-35B-A3B"
+    latest_public_node: "Qwen3.5-397B-A17B / Qwen3.6-35B-A3B"
+    current_focus: "MoE, hybrid attention, multilingual open family, multimodality"
+    signature_innovations:
+      - "Chinese/multilingual open family"
+      - "rapid family iteration"
+      - "hybrid attention"
+      - "MoE and multimodal expansion"
     openness: "Apache 2.0/open-weight"
-    architecture_public: "Qwen3_5MoeForConditionalGeneration; MoE; alternating linear_attention/full_attention; vision config"
-    citations: ["S019", "S030", "S031"]
+    notes: "Qwen 的优势在于家族完整、语言覆盖广和迭代速度快。"
   minimax:
-    latest_public: "MiniMax-M2.1"
-    openness: "open-weight/API"
-    architecture_public: "MiniMaxM2ForCausalLM; MoE; 62 layers; 256 local experts; MTP"
-    citations: ["S020", "S021", "S029"]
+    latest_public_node: "MiniMax-M2.1"
+    current_focus: "low-active-parameter coding and agent workloads"
+    signature_innovations:
+      - "low active MoE"
+      - "agentic data synthesis"
+    openness: "modified MIT/open-weight"
+    notes: "重点在效率和 agent 任务，而不是单纯堆参数。"
   glm:
-    latest_public: "GLM-5.1"
+    latest_public_node: "GLM-5.1"
+    current_focus: "autonomous engineering tasks, MoE + DSA, long context"
+    signature_innovations:
+      - "engineering agent positioning"
+      - "MoE + DSA"
+      - "200K context"
     openness: "MIT/open-weight/API"
-    architecture_public: "GlmMoeDsaForCausalLM; MoE + DSA; 78 layers; 256 routed experts"
-    citations: ["S022", "S032"]
+    notes: "更强调真实工程任务与工具链，而不只聊天表现。"
   grok:
-    latest_public: "Grok 4.20 reasoning/non-reasoning"
+    latest_public_node: "Grok 4.20"
+    current_focus: "2M context, route variants, product-facing reasoning"
+    signature_innovations:
+      - "2M context"
+      - "reasoning and non-reasoning variants"
     openness: "closed"
-    architecture_public: "底层模型结构官方未披露; API 披露 2M context and variants"
-    citations: ["S024"]
+    notes: "公开结构信息较少，更适合作为产品化闭源路线观察对象。"
   mistral:
-    latest_public: "Mistral Large 3"
+    latest_public_node: "Mistral Large 3"
+    current_focus: "sparse MoE, enterprise deployment, open-weight frontier"
+    signature_innovations:
+      - "Mixtral sparse MoE"
+      - "enterprise-friendly open deployment"
+      - "675B/41B sparse frontier"
     openness: "Apache 2.0/open-weight"
-    architecture_public: "sparse MoE; 675B total / 41B active; 256k context"
-    citations: ["S025", "S026", "S035"]
+    notes: "Mistral 是开源/开放权重欧洲路线的重要代表。"

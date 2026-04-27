@@ -1,0 +1,43 @@
+families:
+  - family: "openai"
+    key_generations: ["GPT-1", "GPT-3", "InstructGPT", "ChatGPT", "GPT-4", "GPT-5.x"]
+    signature_innovations: ["generative pre-training", "scaling", "RLHF", "reasoning effort", "computer use"]
+    latest_node: "T028"
+    timeline_nodes: ["T002", "T005", "T008", "T009", "T012", "T028"]
+    notes: "主线是预训练扩展、对齐产品化和推理预算接口化。"
+  - family: "claude"
+    key_generations: ["Constitutional AI", "Claude 2", "Claude 3", "Claude Opus 4.7"]
+    signature_innovations: ["Constitutional AI", "long context", "agentic coding", "task budget"]
+    latest_node: "T027"
+    timeline_nodes: ["T010", "T011", "T016", "T027"]
+    notes: "重点在对齐路线、长文本能力和 long-horizon coding。"
+  - family: "gemini"
+    key_generations: ["Transformer/T5/FLAN heritage", "Gemini 1.5", "Gemini 3.1 Pro"]
+    signature_innovations: ["self-attention", "text-to-text", "instruction tuning", "long context", "multimodality", "grounding"]
+    latest_node: "T029"
+    timeline_nodes: ["T001", "T004", "T006", "T015", "T029"]
+    notes: "Google 同时影响底层方法论和产品化模型路线。"
+  - family: "meta"
+    key_generations: ["LLaMA", "Llama 2", "Llama 3", "Llama 4", "Muse Spark"]
+    signature_innovations: ["open-weight ecosystem", "Llama family scaling", "multimodal MoE", "product routing"]
+    latest_node: "T026"
+    timeline_nodes: ["T013", "T017", "T026"]
+    notes: "Llama 与 Muse Spark 必须分离：一个是基础模型，一个是产品系统。"
+  - family: "kimi"
+    key_generations: ["Moonshot V1 long-context phase", "Kimi K2", "Kimi K2.5", "Kimi K2.6"]
+    signature_innovations: ["long-context productization", "MoE agent coding", "thinking modes", "native multimodality"]
+    latest_node: "T025"
+    timeline_nodes: ["T023", "T024", "T025"]
+    notes: "从长文本入口演进为综合 Agent 家族。"
+  - family: "deepseek"
+    key_generations: ["DeepSeek-V3", "DeepSeek-R1", "DeepSeek-V3.2"]
+    signature_innovations: ["DeepSeekMoE", "MLA", "reasoning RL", "tool-use thinking"]
+    latest_node: "T030"
+    timeline_nodes: ["T020", "T021", "T030"]
+    notes: "DeepSeek 的创新横跨结构、训练范式和工具推理。"
+  - family: "qwen"
+    key_generations: ["Qwen2", "Qwen2.5", "Qwen3"]
+    signature_innovations: ["open multilingual family", "family iteration", "hybrid thinking", "hybrid attention", "MoE"]
+    latest_node: "T022"
+    timeline_nodes: ["T018", "T019", "T022"]
+    notes: "Qwen 是中文/多语言开源主线中最完整的家族之一。"

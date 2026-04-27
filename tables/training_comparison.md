@@ -1,4 +1,6 @@
-# Training Comparison
+# Historical Training Comparison
+
+本表是附录，关注不同阶段公开材料对训练披露粒度的差异，而不是当前主时间线。
 
 | 模型 | 预训练披露 | 训练基础设施 | 稳定性/优化 |
 |---|---|---|---|

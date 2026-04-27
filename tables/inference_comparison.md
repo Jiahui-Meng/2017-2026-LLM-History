@@ -1,4 +1,6 @@
-# Inference Comparison
+# Historical Inference Comparison
+
+本表是附录，关注“推理时计算、工具、上下文和部署”如何逐步成为 2025-2026 的主竞争轴。
 
 | 模型 | thinking/test-time compute | tools | context | 部署 |
 |---|---|---|---|---|
@@ -8,4 +10,3 @@
 | GLM-5.1 | thinking mode。[S022: Capability] | function/MCP/context cache | 200K | Z.ai API |
 | Grok 4.20 | reasoning/non-reasoning variants。[S024: API table] | agentic tool calling | 2M | xAI API |
 | Mistral Large 3 | reasoning version coming soon。[S025: Mistral Large 3] | agents/function/OCR/FIM | 256k | open weights/API |
-

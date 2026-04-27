@@ -1,4 +1,6 @@
-# Post-Training Comparison
+# Historical Post-Training Comparison
+
+本表是附录，帮助横向观察后训练路线从 SFT/RLHF 走向 agent data 与 reasoning RL 的变化。
 
 | 模型 | SFT/RL/RLHF/RLAIF/DPO/GRPO/RLVR | Agent/tool training | Safety tuning |
 |---|---|---|---|
@@ -6,4 +8,3 @@
 | MiniMax-M2.1 | 后训练优化公开但完整算法未披露。[S021: Model Overview] | SWE Scaling/AppDev/WebExplorer。[S021: Agentic Data Synthesis] | 未完整披露 |
 | GLM-5.1 | multi-turn SFT + RL + process-quality eval。[S022: release notes] | long-horizon task execution。[S022: Overview] | 未完整披露 |
 | Claude Opus 4.7 | 具体配方未披露 | Claude Code/task budgets 产品化。[S005: Also launching today] | alignment assessment/cyber safeguards。[S005: Safety] |
-

@@ -2,31 +2,29 @@
 
 ## 判定规则
 
-- 只有官方发布页、官方文档、官方 GitHub/Hugging Face model card、官方 config.json 中出现的字段，才写入事实表。
-- 没有官方字段时统一写“官方未披露”。
-- LMArena 分数只用于人类偏好观察，不用于补全结构字段。[S050: schema]
+- 只记录官方发布页、官方文档、官方 GitHub/Hugging Face model card、官方论文或官方 config 中明确出现的事实。
+- 闭源模型未公开的结构、参数、专家数、训练 token、后训练细节，统一写“官方未披露”。
+- 产品系统能力和 base model 内部结构强制分开；不能因为 ChatGPT、Muse Spark、Claude Code 很强，就反推底层模型结构。
 
-## 闭源模型未公开结构
+## 历史叙事里的高风险误区
 
-| 模型 | 已公开接口结构 | 官方未披露字段 | 置信度 |
-|---|---|---|---|
-| GPT-5.5 / GPT-5.4 | GPT-5.4 1M context、reasoning effort、computer use；GPT-5.5 ChatGPT/Codex 发布。[S001][S003][S004] | dense/MoE、参数、active params、layers、hidden size、attention、positional encoding、experts/router、tokenizer/vocab、训练与后训练配方。 | 高 |
-| Claude Opus 4.7 | 1M context、xhigh effort、task budgets、图像输入、API/云平台部署。[S005][S006] | 参数、active params、layers、hidden size、attention、experts/router、tokenizer/vocab、训练与后训练配方。 | 高 |
-| Gemini 3.1 Pro / 3 Pro | 1,048,576 input / 65,536 output tokens、多模态输入、thinking、function calling、search grounding、code execution。[S008][S009] | dense/MoE、参数、layers、hidden size、attention、experts/router、tokenizer/vocab、训练与后训练配方。 | 高 |
-| Grok 4.20 | 2M context、reasoning/non-reasoning API 变体、image token pricing。[S024] | dense/MoE、参数、layers、hidden size、attention、experts/router、tokenizer/vocab、训练与后训练配方。 | 高 |
+| 误区 | 正确处理 |
+|---|---|
+| 把“产品节点”写成“模型架构节点” | 例如 ChatGPT、Muse Spark、Claude Code 需要标记为 product/system node。 |
+| 把早期技术报告数字直接套到后续未披露版本 | 例如 DeepSeek-V3 的公开数字不能直接当作 V3.2 未披露字段。 |
+| 用排行榜结果补全架构事实 | LMArena 只能说明人类偏好结果，不能证明参数、专家、注意力机制。 |
+| 把同样叫 MoE 的家族写成同一种创新 | Mixtral、DeepSeek、Qwen、Kimi、Llama 4、Mistral Large 3 的 MoE 路线和公开粒度并不相同。 |
 
-## 开放权重但仍缺失的结构字段
+## 闭源家族的主要未知项
 
-| 模型 | 官方已公开结构 | 官方未披露字段 | 置信度 |
-|---|---|---|---|
-| Llama 4 Scout/Maverick | MoE、image-text-to-text、total/active naming、experts 数、context。[S012][S033][S034] | layers、hidden size、attention、positional encoding、tokenizer/vocab、vision encoder 细节、router/top-k、完整训练/后训练配方。 | 高 |
-| Kimi K2.6 | 61 text layers、7168 hidden、384 routed experts、vision 27 layers、262144 context、vocab 163840。[S027] | active params、训练数据、优化器、完整后训练配方。 | 高 |
-| DeepSeek-V3.2 | 61 layers、7168 hidden、256 routed experts、DSA/MLA 字段、163840 context、vocab 129280。[S028] | V3.2 active params、训练数据差异、完整后训练配方。 | 高 |
-| Qwen3.5/Qwen3.6 | MoE、layers、hidden size、alternating attention、mRoPE、vision tower、context、vocab。[S030][S031] | 完整训练数据、优化器、完整后训练配方、reasoning 内部结构。 | 高 |
-| MiniMax-M2.1 | 62 layers、3072 hidden、256 local experts、MTP、196608 context、vocab 200064。[S029] | 完整训练数据、优化器、训练基础设施、完整后训练配方。 | 高 |
-| GLM-5.1 | 78 layers、6144 hidden、256 routed experts、DSA/index 字段、202752 context、vocab 154880。[S032] | active params、训练数据、优化器、完整后训练配方、reasoning 内部结构。 | 高 |
-| Mistral Large 3 | sparse MoE、675B total、41B active、256k context、Apache 2.0 open-weight。[S025][S026][S035] | layers、hidden size、attention、positional encoding、tokenizer/vocab、专家数量、router/top-k、vision encoder 细节、完整训练/后训练配方。 | 高 |
+| 家族 | 已知 | 官方未披露 |
+|---|---|---|
+| OpenAI GPT-4 / GPT-5.x | context、工具、推理预算、产品能力。[S001][S003][S044] | dense/MoE、参数、层数、专家数、完整训练与后训练配方。 |
+| Claude 3 / 4.x | Constitutional AI 路线、长上下文、effort、task budget、agentic coding。[S005][S045][S047] | 参数、层数、专家路由、训练 token 与完整奖励设计。 |
+| Gemini 1.5 / 3 | 1M 级 context、多模态、Thinking、grounding、tooling。[S008][S009][S048] | 参数、专家结构、完整训练/后训练配方。 |
+| Grok 4.20 | 2M context、reasoning/non-reasoning 变体。[S024] | 内部结构、训练细节、专家路由。 |
+| Muse Spark | 产品能力和子代理工作流定位。[S011] | 底层模型结构与训练细节。 |
 
-## 产品系统能力与模型结构的分界
+## 开放权重家族的主要未知项
 
-tool calling、computer use、search grounding、MCP、subagents、Claude Code、Codex、Gemini code execution、xAI reasoning/non-reasoning route 都是公开接口或产品系统能力。除非官方明确把它们写入模型 config 或技术报告中的内部层结构，本项目不把它们记为 base model architecture。[S003][S005][S008][S011][S022][S024]
+开放权重模型通常更透明，但也未必披露完整训练与后训练配方。DeepSeek、Qwen、Kimi、MiniMax、GLM、Llama 4、Mistral Large 3 虽然公开了大量结构事实，但在 active params、训练 token、奖励细节和完整 agent 数据配方上仍经常保留空白。[S015][S027][S028][S029][S030][S031][S032][S033][S035]

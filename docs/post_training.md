@@ -1,13 +1,30 @@
-# 后训练
+# 后训练路线演进
 
-## 已明确披露
+后训练决定模型“会不会按你的方式工作”。从 2021 到 2026，LLM 的可用性跃迁很大程度上都发生在这里。
 
-- DeepSeek-V3 经过 SFT 与 RL 阶段；V3.2 引入大规模 agent training data synthesis，覆盖 1,800+ environments 与 85k+ complex instructions。[S015: Introduction][S014: Thinking in Tool-Use]
-- MiniMax-M2.1 披露 agentic data synthesis：SWE Scaling、AppDev、WebExplorer，用于 coding 与搜索/长程任务。[S021: Agentic Data Synthesis]
-- GLM-5.1 release notes 称基于 multi-turn SFT、RL、process-quality evaluation framework 提升长程稳定性和工具使用。[S022: Release notes excerpt]
-- Claude Opus 4.7 披露安全对齐评估和对 cyber 能力 differential reduction 的尝试。[S005: Safety and alignment]
+## Instruction Tuning
 
-## 未披露或不完整
+- FLAN 把 instruction tuning 从技巧推进为清晰范式：让模型看见“任务是怎么被要求的”，zero-shot 任务表现会明显提升。[S042]
+- 这一步为 chat、tool use、structured output 打下了接口层基础。
 
-OpenAI GPT-5.5、Gemini 3.1、Grok 4.20、Muse Spark 的 SFT/RLHF/RLAIF/DPO/GRPO/RLVR 细节官方未完整披露。[S001: Intro][S010: launch][S024: API table][S011: A New Model]
+## RLHF
 
+- InstructGPT 说明光靠 instruction tuning 还不够，模型还需要朝“人类更偏好的回答”继续优化。[S043]
+- ChatGPT 则把 RLHF 的价值大规模产品化：回答更像助手，也更愿意拒绝不该做的内容。[S043]
+
+## Constitutional AI
+
+- Anthropic 把“让模型参考一套成文原则自我批评和修正”做成了与 RLHF 并列的重要对齐路线。[S045]
+- 这条路线直接影响了 Claude 家族的安全风格、拒答方式和可控性叙事。[S045][S046][S047]
+
+## Agentic Data 与 Reasoning RL
+
+- DeepSeek-V3.2 披露了大规模 agent training data synthesis，并强调 thinking in tool-use。[S014]
+- MiniMax-M2.1 披露了面向 coding、web explorer 和 long-horizon agent 的合成数据路线。[S021]
+- DeepSeek-R1 把 reasoning-first RL 推成行业焦点之一，使“推理过程是否可训练”重新成为主问题。[S057]
+- Claude 4.x、Gemini Thinking、OpenAI effort、Kimi thinking 说明后训练和推理时预算已经开始联动设计。[S003][S005][S009][S017]
+
+## 现在的结论
+
+1. 预训练决定“知道什么”，后训练决定“怎么工作”。
+2. 2026 年的高端模型差异，很大一部分不再来自公开可见的参数规模，而来自后训练数据、奖励设计、推理预算和工具策略。

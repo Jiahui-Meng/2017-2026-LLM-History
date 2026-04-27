@@ -1,13 +1,33 @@
-# 预训练
+# 预训练路线演进
 
-预训练公开程度呈明显分层：开放权重模型通常披露更多参数与训练路线；闭源模型多只披露能力与安全评估。[S015: Model Summary][S025: Mistral Large 3]
+预训练阶段决定模型“见过什么、学过什么、容量有多大”；但 LLM 发展史证明，预训练不是唯一主角，它和后训练、推理时计算、产品系统始终在重新分工。
 
-| 模型 | 数据规模/类型 | 基础设施 | 稳定性/优化 |
-|---|---|---|---|
-| GPT-5.5 | 官方未披露 | 官方未披露 | system card 披露预部署安全评估，非完整训练细节。[S002: Introduction] |
-| GPT-5.4 | 官方未披露 | 官方未披露 | 强调比 GPT-5.2 更 token efficient。[S003: Intro] |
-| Claude Opus 4.7 | 官方未披露 | 官方未披露 | 官方提到训练中尝试 differential reduction 降低高风险 cyber 能力。[S005: Safety] |
-| Gemini 3 | 官方未披露 | 官方未披露 | 官方披露 knowledge cutoff 与 capability，不披露训练规模。[S009: Model table] |
-| DeepSeek-V3 背景 | 14.8T tokens，多样高质量语料；V3 使用 FP8、稳定训练无不可恢复 loss spikes。[S015: Introduction] | 2.788M H800 GPU hours。[S015: Introduction] | auxiliary-loss-free load balancing、MTP。[S015: Model Summary] |
-| Mistral Large 3 | 训练数据配比未披露 | 从零训练于 3000 NVIDIA H200 GPUs。[S025: Mistral Large 3] | NVIDIA/vLLM/Red Hat 优化 serving；非完整优化器说明。[S025: NVIDIA collaboration] |
-| MiniMax-M2.1 | 官方未披露完整预训练数据 | 官方未披露 | M2.1 重点披露后训练而非预训练。[S021: Model Overview] |
+## 第一阶段：先证明 Transformer 能做大规模语言建模
+
+- Transformer 奠定统一架构底座。[S036]
+- GPT-1 证明生成式预训练可以迁移到多个任务。[S037]
+- BERT 证明双向编码器在理解任务上更强。[S038]
+- T5 证明“统一接口”有很强的方法论价值。[S039]
+
+## 第二阶段：规模本身成为方法
+
+- GPT-3 让行业接受“大模型会出现 few-shot 能力”。[S040]
+- 这一阶段的核心逻辑是：更多参数、更多数据、更多算力往往带来更强通用性，但成本极高。[S040]
+
+## 第三阶段：从盲目扩参到 compute-optimal
+
+- Chinchilla 改变了“只追求更大参数”的路线，强调参数和 token 配比要更合理。[S041]
+- 后续基础模型更重视高质量 token、训练稳定性和成本效率，而不仅是 headline 参数数。
+
+## 第四阶段：开放权重开始公开自己的工程答案
+
+- Llama 2 打开了高质量 open-weight 生态。[S049]
+- Mixtral 把稀疏 MoE 做成开源主流方向。[S056]
+- DeepSeek-V3 把 MLA、MoE、MTP 与训练效率组合成更可审计的开源结构方案。[S015]
+- Qwen3.x、Kimi K2.6、MiniMax-M2.1、GLM-5.1 等进一步把 MoE、长上下文和部署格式推向前沿竞争。[S017][S019][S020][S022]
+
+## 现在的结论
+
+1. 预训练仍决定上限，但已经不是唯一解释变量。
+2. 数据质量、token 配比和训练经济学的重要性已经和参数规模并列。[S041]
+3. 对 2025-2026 的前沿模型来说，很多真正拉开差距的地方发生在后训练、推理时计算和产品系统，而不只在预训练本身。

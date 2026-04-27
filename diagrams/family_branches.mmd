@@ -1,0 +1,41 @@
+flowchart TD
+  Root[Transformer Era]
+  Root --> OpenAI[OpenAI]
+  Root --> Claude[Anthropic Claude]
+  Root --> Gemini[Google Gemini]
+  Root --> Meta[Meta / Llama]
+  Root --> Kimi[Kimi]
+  Root --> DeepSeek[DeepSeek]
+  Root --> Qwen[Qwen]
+
+  OpenAI --> O1[GPT-1]
+  O1 --> O2[GPT-3]
+  O2 --> O3[ChatGPT / GPT-4]
+  O3 --> O4[GPT-5.x]
+
+  Claude --> C1[Claude 1]
+  C1 --> C2[Claude 2]
+  C2 --> C3[Claude 3]
+  C3 --> C4[Claude 4.x]
+
+  Gemini --> G1[T5 / FLAN heritage]
+  G1 --> G2[Gemini 1.5]
+  G2 --> G3[Gemini 3]
+
+  Meta --> M1[LLaMA]
+  M1 --> M2[Llama 2]
+  M2 --> M3[Llama 3]
+  M3 --> M4[Llama 4]
+  Meta --> M5[Muse Spark]
+
+  Kimi --> K1[Long context phase]
+  K1 --> K2[Kimi K2]
+  K2 --> K3[Kimi K2.6]
+
+  DeepSeek --> D1[DeepSeek-V3]
+  D1 --> D2[DeepSeek-R1]
+  D2 --> D3[DeepSeek-V3.2]
+
+  Qwen --> Q1[Qwen2]
+  Q1 --> Q2[Qwen2.5]
+  Q2 --> Q3[Qwen3.x]
